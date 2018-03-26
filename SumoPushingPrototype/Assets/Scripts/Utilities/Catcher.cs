@@ -8,8 +8,8 @@ public class Catcher : MonoBehaviour {
     {
         if(other.tag == "Pushable")
         {
-            float x = Random.Range(-10f, 10f);
-            float z = Random.Range(-10f, 10f);
+            float x = Random.Range(-5f, 5f);
+            float z = Random.Range(-5f, 5f);
 
             other.transform.position = new Vector3(x, 3f, z);
         }

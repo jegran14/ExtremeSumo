@@ -7,8 +7,7 @@ public class PlayerMovement : MonoBehaviour {
     public float turnSpeed = 180f;
 
     private Rigidbody rb;
-    private float movementInputValue;
-    private float turnInputValue;
+    private Vector3 movementInputValue;
 
     private void Awake()
     {
@@ -18,8 +17,7 @@ public class PlayerMovement : MonoBehaviour {
     private void OnEnable()
     {
         rb.isKinematic = false;
-        movementInputValue = 0f;
-        turnInputValue = 0f;
+        movementInputValue = new Vector3();
     }
 
     private void OnDisable()
@@ -34,8 +32,7 @@ public class PlayerMovement : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        movementInputValue = Input.GetAxis("Vertical");
-        turnInputValue = Input.GetAxis("Horizontal");
+        movementInputValue = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
 	}
 
     private void FixedUpdate()
@@ -46,13 +43,14 @@ public class PlayerMovement : MonoBehaviour {
 
     private void Move()
     {
-        Vector3 movement = transform.forward * movementInputValue * speed * Time.deltaTime;
+        Vector3 movement = movementInputValue * speed * Time.deltaTime;
         rb.MovePosition(rb.position + movement);
     }
 
     private void Turn()
     {
-        float turn = turnInputValue * turnSpeed * Time.deltaTime;
+        float dot = Vector3.Dot(transform.right, movementInputValue);
+        float turn = dot * turnSpeed * Time.deltaTime;
         Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
         rb.MoveRotation(rb.rotation * turnRotation);
     }
