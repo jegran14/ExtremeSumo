@@ -70,7 +70,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 51
+  controlID: 96
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 143
+  controlID: 144
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -313,9 +313,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e82d0000
-    m_LastClickedID: 11752
-    m_ExpandedIDs: 98fbffff00000000
+    m_SelectedIDs: 302e0000
+    m_LastClickedID: 11824
+    m_ExpandedIDs: 98fbffff00000000302e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -411,18 +411,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts/Player/Characters
+    - Assets/Scripts/Player
   m_ViewMode: 1
   m_StartGridSize: 77
   m_LastFolders:
-  - Assets/Scripts/Player/Characters
+  - Assets/Scripts/Player
   m_LastFoldersGridSize: 77
   m_LastProjectPath: "D:\\Clase\\2017-2018\\Segundo semestre\\Motores de videjuegos\\Pr\xE1cticas\\Proyectos\\ExtremeSumo\\SumoPushingPrototype"
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 65}
-    m_SelectedIDs: 4a2a0000
-    m_LastClickedID: 10826
+    m_SelectedIDs: 402c0000
+    m_LastClickedID: 11328
     m_ExpandedIDs: 0000000014290000ae2a0000082c0000162c0000402c0000ec2e0000ee2e0000f02e0000f22e0000f42e0000f62e000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0

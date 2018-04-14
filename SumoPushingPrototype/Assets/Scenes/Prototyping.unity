@@ -769,7 +769,7 @@ GameObject:
   - component: {fileID: 1547857673}
   - component: {fileID: 1547857672}
   - component: {fileID: 1547857671}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arena
   m_TagString: Untagged
   m_Icon: {fileID: 0}

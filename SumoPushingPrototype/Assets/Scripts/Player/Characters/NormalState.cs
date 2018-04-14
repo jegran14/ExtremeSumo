@@ -32,6 +32,8 @@ public class NormalState : ICharacterState
     {
         Vector3 movement = movementInput * thePlayer.movementSpeed * Time.deltaTime;
         thePlayer.Move(movement);
+
+        
     }
 
     private void Turn()
@@ -41,5 +43,10 @@ public class NormalState : ICharacterState
             Quaternion rotation = Quaternion.SlerpUnclamped(thePlayer.transform.rotation, Quaternion.LookRotation(movementInput), thePlayer.turnSpeed * Time.deltaTime);
             thePlayer.Turn(rotation);
         }
+    }
+
+    private void Falling(bool falling)
+    {
+
     }
 }

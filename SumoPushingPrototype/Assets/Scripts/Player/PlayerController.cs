@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
+    //Movement paramenters
     public float movementSpeed = 10f;
     public float turnSpeed = 300f;
-
+    //Character States
     [HideInInspector] public NormalState normalState;
-
+    private ICharacterState currentState; //The current state the character is on
+    //Collision layers
+    private int pushableLayer;
+    private int groundLayer;
+    //Character components
     private Rigidbody rb;
-    private ICharacterState currentState;
+    private Animator anim;
+    
 
 	// Use this for initialization
 	void Start () {
@@ -17,7 +23,10 @@ public class PlayerController : MonoBehaviour {
 
         normalState = new NormalState(this, rb);
         currentState = normalState;
-	}
+
+        pushableLayer = LayerMask.GetMask("Pushable");
+        groundLayer = LayerMask.GetMask("Ground");
+    }
 	
 	// Update is called once per frame
 	void Update () {
