@@ -38,9 +38,7 @@ public class NormalState : ICharacterState
     {
         if(movementInput != Vector3.zero)
         {
-            float angle = Vector3.Angle(movementInput, thePlayer.transform.forward);
-            Debug.Log(angle);
-            Quaternion rotation = Quaternion.AngleAxis(angle * Time.deltaTime * thePlayer.turnSpeed, Vector3.up);
+            Quaternion rotation = Quaternion.SlerpUnclamped(thePlayer.transform.rotation, Quaternion.LookRotation(movementInput), thePlayer.turnSpeed * Time.deltaTime);
             thePlayer.Turn(rotation);
         }
     }

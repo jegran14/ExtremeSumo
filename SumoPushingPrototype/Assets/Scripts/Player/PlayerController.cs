@@ -37,6 +37,6 @@ public class PlayerController : MonoBehaviour {
     public void Turn(Quaternion rot)
     {
         //Quaternion rotation = Quaternion.LerpUnclamped(rot, rb.rotation, turnSpeed*Time.deltaTime);
-        rb.MoveRotation(rb.rotation * rot);
+        rb.MoveRotation(rot);
     }
 }
