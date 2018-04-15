@@ -95,7 +95,7 @@ public class NormalState : ICharacterState
 
                 if (!target) continue;
 
-                target.AddForce(pushDirection * thePlayer.pushForce / 10, ForceMode.Impulse);
+                target.AddExplosionForce(thePlayer.pushForce * 10, thePlayer.transform.position, thePlayer.pushRadius * 1.5f);
 
             }
 

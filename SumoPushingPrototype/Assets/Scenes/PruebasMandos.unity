@@ -213,8 +213,8 @@ MonoBehaviour:
   turnSpeed: 60
   pushForce: 10
   numberOfPushes: 1
-  pushingTime: 0.3
-  pushRadius: 1
+  pushingTime: 0.5
+  pushRadius: 2
   pushableLayer: 0
   groundLayer: 0
 --- !u!54 &529727573
@@ -293,8 +293,8 @@ MonoBehaviour:
   turnSpeed: 60
   pushForce: 10
   numberOfPushes: 1
-  pushingTime: 0.3
-  pushRadius: 1
+  pushingTime: 0.5
+  pushRadius: 2
   pushableLayer: 0
   groundLayer: 0
 --- !u!54 &555137842
