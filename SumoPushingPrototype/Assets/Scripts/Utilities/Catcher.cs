@@ -6,7 +6,7 @@ public class Catcher : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Pushable")
+        if (other.tag == "Pushable" || other.tag.Contains("Player"))
         {
             float x = Random.Range(-5f, 5f);
             float z = Random.Range(-5f, 5f);

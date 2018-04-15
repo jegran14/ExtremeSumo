@@ -5,15 +5,20 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
     //Player Number
     public int player;
+    public int inputNumber;
 
     //Movement paramenters
     public float movementSpeed = 10f;
     public float turnSpeed = 20f;
+
+    //Push parameters
     public float pushForce = 10f;
+    public int numberOfPushes = 2;
+    public float pushingTime = 1f;
+    public float pushRadius = 1f;
 
     //Character States
     [HideInInspector] public NormalState normalState;
-    [HideInInspector] public PushState pushState;
     private ICharacterState currentState; //The current state the character is on
 
     //Collision layers
@@ -33,7 +38,6 @@ public class PlayerController : MonoBehaviour {
         anim = GetComponentInChildren<Animator>();
 
         normalState = new NormalState(this);
-        pushState = new PushState(this);
         currentState = normalState;
 
         pushableLayer = LayerMask.GetMask("Pushable");
@@ -70,12 +74,6 @@ public class PlayerController : MonoBehaviour {
         rb.MoveRotation(rot);
     }
 
-    public void Push()
-    {
-        currentState = pushState;
-        pushState.Push();
-    }
-
     public void ToNormal()
     {
         currentState = normalState;
@@ -90,7 +88,5 @@ public class PlayerController : MonoBehaviour {
             dir = transform.forward;
 
         rb.AddForce(transform.forward * force, ForceMode.Impulse);
-
-        ToNormal();
     }
 }
