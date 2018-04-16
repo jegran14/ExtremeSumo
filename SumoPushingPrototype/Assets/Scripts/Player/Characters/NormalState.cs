@@ -89,13 +89,14 @@ public class NormalState : ICharacterState
 
             for(int i = 0; i < colliders.Length; i++)
             {
-                if (colliders[i].tag == thePlayer.tag) { Debug.Log("Yoh!"); continue; }
+                if (colliders[i].tag == thePlayer.tag) { continue; }
+                Debug.Log(colliders[i].tag);
 
                 Rigidbody target = colliders[i].GetComponent<Rigidbody>();
 
                 if (!target) continue;
 
-                target.AddExplosionForce(thePlayer.pushForce * 10, thePlayer.transform.position, thePlayer.pushRadius * 1.5f);
+                target.AddExplosionForce(thePlayer.pushForce * 10, thePlayer.transform.position, thePlayer.pushRadius * 1.5f, 0f);
 
             }
 

@@ -30,12 +30,14 @@ public class PlayerController : MonoBehaviour {
     //Character components
     private Rigidbody rb;
     private Animator anim;
+    private ParticleSystem particles;
     
 
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
+        particles = GetComponentInChildren<ParticleSystem>();
 
         normalState = new NormalState(this);
         currentState = normalState;
@@ -61,6 +63,7 @@ public class PlayerController : MonoBehaviour {
         if (movement != Vector3.zero)
         {
             anim.SetBool("Walking", true);
+            particles.Play();
         }     
         else
         {
