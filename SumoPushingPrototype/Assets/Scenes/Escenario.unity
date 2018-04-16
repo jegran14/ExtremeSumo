@@ -4577,7 +4577,7 @@ GameObject:
   - component: {fileID: 529727572}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Pushable
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4594,9 +4594,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 1
+  inputNumber: 0
   movementSpeed: 10
   turnSpeed: 60
   pushForce: 10
+  numberOfPushes: 2
+  pushingTime: 1
+  pushRadius: 1
   pushableLayer: 0
   groundLayer: 0
 --- !u!54 &529727573
@@ -14559,7 +14563,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 1000
-  field of view: 35.3
+  field of view: 23.8
   orthographic: 0
   orthographic size: 6.5
   m_Depth: -1
