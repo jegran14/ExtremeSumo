@@ -1,24 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 
 public class EnemyMovement : MonoBehaviour {
 
-    GameObject [] players;
-    NavMeshAgent nav;
-    Transform player;
-    Vector3 position;
-    float distance;
+    public GameObject [] players;
+
+    private UnityEngine.AI.NavMeshAgent nav;
+    private Transform player;
+    private Vector3 position;
+    private float distance;
+    private Animator anim;
 
 
 	// Use this for initialization
 	void Awake () {
-        players = GameObject.FindGameObjectsWithTag("Player1");
-
-        nav = GetComponent<NavMeshAgent>();
-	}
+        nav = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        anim = GetComponentInChildren<Animator>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -36,7 +36,16 @@ public class EnemyMovement : MonoBehaviour {
                 distance = currentDistance;
             }
         }
+        
+        if(distance > 0.9)
+        {
+            anim.SetBool("Walking", true);
+        }
+        else
+        {
+            anim.SetBool("Walking", false);
 
+        }
         nav.SetDestination(player.position);
 	}
 }
