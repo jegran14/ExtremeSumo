@@ -96,7 +96,6 @@ public class NormalState : ICharacterState
                 if (!target) continue;
 
                 target.AddExplosionForce(thePlayer.pushForce * 10, thePlayer.transform.position, thePlayer.pushRadius * 1.5f);
-                target.Sleep();
             }
 
             pushingTimer += Time.deltaTime;
