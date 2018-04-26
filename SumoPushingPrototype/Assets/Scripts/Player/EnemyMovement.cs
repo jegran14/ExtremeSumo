@@ -8,7 +8,8 @@ public class EnemyMovement : MonoBehaviour {
     public GameObject[] players;
 
     private UnityEngine.AI.NavMeshAgent nav;
-    private Transform player;
+
+    private GameObject thePlayer;
     private Vector3 position;
     private float distance;
     private Animator anim;
@@ -18,7 +19,7 @@ public class EnemyMovement : MonoBehaviour {
     private float pushingTimer;
     private Vector3 pushDirection;
 
-    RaycastHit raycast;
+    RaycastHit hit;
 
 
     //Push parameters
@@ -47,16 +48,6 @@ public class EnemyMovement : MonoBehaviour {
         pushingTimer = 0;
     }
 
-    public void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.layer == 9)
-        {
-            nav.enabled = false;
-        }
-    }
-
-
-
     // Update is called once per frame
     void Update() {
 
@@ -70,7 +61,7 @@ public class EnemyMovement : MonoBehaviour {
             var currentDistance = diference.sqrMagnitude;
             if (currentDistance < distance)
             {
-                player = players[i].transform;
+                thePlayer = players[i];
                 distance = currentDistance;
             }
         }
@@ -84,7 +75,20 @@ public class EnemyMovement : MonoBehaviour {
             anim.SetBool("Walking", false);
             Push();
         }
-        nav.SetDestination(player.position);
+
+        if (!Physics.Raycast(transform.position,
+            transform.TransformDirection(Vector3.down),
+            out hit, Mathf.Infinity, LayerMask.GetMask("Ground")))
+        {
+            nav.enabled = false;
+            anim.SetBool("Walking", false);
+        }
+        else
+        {
+            anim.SetBool("Walking", true);
+            nav.enabled = true;
+        }
+        nav.SetDestination(thePlayer.transform.position);
     }
 
     private void FixedUpdate()
