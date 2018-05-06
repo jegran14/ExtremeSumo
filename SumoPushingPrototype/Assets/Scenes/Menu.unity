@@ -167,7 +167,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ded41db08959ba347a3b4a7fbdaa8f4d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cec88da8065b268448d585abb47c09cb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -631,7 +631,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1022682368}
-        m_MethodName: PlayGame
+        m_MethodName: LevelPradera
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1805,7 +1805,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1022682368}
-        m_MethodName: PlayGame
+        m_MethodName: LevelVolcan
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1927,7 +1927,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1022682368}
-        m_MethodName: PlayGame
+        m_MethodName: LevelIceberg
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -16,9 +16,19 @@ public class MainMenu : MonoBehaviour {
 		
 	}
 
-    public void PlayGame()
+    public void LevelPradera()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void LevelIceberg()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+    }
+
+    public void LevelVolcan()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
     }
 
     public void QuitGame()
