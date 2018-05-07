@@ -4,10 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
+    private GameManager gameManager;
 
 	// Use this for initialization
 	void Start () {
-
+        gameManager = FindObjectOfType<GameManager>();
 	}
 
 
@@ -18,17 +19,17 @@ public class MainMenu : MonoBehaviour {
 
     public void LevelPradera()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        gameManager.LoadGameLevel(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void LevelIceberg()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        gameManager.LoadGameLevel(SceneManager.GetActiveScene().buildIndex + 2);
     }
 
     public void LevelVolcan()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+        gameManager.LoadGameLevel(SceneManager.GetActiveScene().buildIndex + 3);
     }
 
     public void QuitGame()

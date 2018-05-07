@@ -113,7 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: 1
   inputNumber: 0
-  movementSpeed: 500
+  movementSpeed: 10
   turnSpeed: 60
   dragForce: 2
   pushForce: 10

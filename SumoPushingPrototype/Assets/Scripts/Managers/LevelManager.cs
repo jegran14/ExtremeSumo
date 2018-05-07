@@ -23,7 +23,7 @@ public class LevelManager : MonoBehaviour {
     //Elemento proporcionados en la selección del personaje
     public GameObject[] playersAvatar;    
     public int[] playerAsignations;
-    private int playerCounter = 2;
+    public int playerCounter = 2;
 
     //Elementos a instanciar en el nivel
     public PlayersManager[] players;
@@ -41,7 +41,10 @@ public class LevelManager : MonoBehaviour {
 	void Start () {
         startWait = new WaitForSeconds(startDelay);
         endWait = new WaitForSeconds(endDelay);
+	}
 
+    public void SetUp()
+    {
         players = new PlayersManager[playerCounter];
         markers = new PlayerMarkerController[playerCounter];
 
@@ -49,7 +52,7 @@ public class LevelManager : MonoBehaviour {
         SetCameraTragets();
 
         StartCoroutine(GameLoop());
-	}
+    }
 
     private void SpawnCharacters()
     {
@@ -79,6 +82,7 @@ public class LevelManager : MonoBehaviour {
             players[i].playerInput = playerAsignations[i];
             //Asignar color
             players[i].playerColor = playerColors[i + 1];
+            players[i].playerInstance.tag = "Player" + (i + 1);
             players[i].SetUp();
 
 
@@ -119,7 +123,7 @@ public class LevelManager : MonoBehaviour {
         if(gameWinner != null)
         {
             Debug.Log("Hey we finished");
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
         else
         {

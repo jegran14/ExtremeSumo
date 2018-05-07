@@ -92,11 +92,11 @@ public class NormalState : ICharacterState
             {
                 if (colliders[i].tag == thePlayer.tag) { continue; }
                 
-                PlayerController targetPlayer = colliders[i].GetComponent<PlayerController>();
+               /* PlayerController targetPlayer = colliders[i].GetComponent<PlayerController>();
 
                 if (!targetPlayer)
                 {
-                    Rigidbody target = colliders[i].GetComponent<Rigidbody>();
+                    Rigidbody rigidbody = colliders[i].GetComponent<Rigidbody>();
 
                     if (!target) continue;
                     target.AddExplosionForce(thePlayer.pushForce / 1.1f, thePlayer.transform.position, thePlayer.pushRadius * 1.5f, 0f);
@@ -105,9 +105,13 @@ public class NormalState : ICharacterState
                 Debug.Log("Yhe");
                 Vector3 dir = targetPlayer.transform.position - thePlayer.transform.position;
                 dir = dir.normalized;
-                targetPlayer.Pushed(dir, thePlayer.pushForce);
+                targetPlayer.Pushed(dir, thePlayer.pushForce);*/
 
-                //thePlayer.StopVelocity();
+                Rigidbody target = colliders[i].GetComponent<Rigidbody>();
+
+                if (!target) continue;
+                Debug.Log("Yeh");
+                target.AddExplosionForce(thePlayer.pushForce, thePlayer.transform.position, thePlayer.pushRadius * 1.5f, 0f);
             }
 
             pushingTimer += Time.deltaTime;

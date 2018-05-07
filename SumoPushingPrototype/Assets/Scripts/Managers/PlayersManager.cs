@@ -19,9 +19,7 @@ public class PlayersManager {
 	public void SetUp()
     {
         movement = playerInstance.GetComponent<PlayerController>();
-
         movement.inputNumber = playerInput;     
-
         marker.spriteColor = playerColor;
 
         nWins = 0;
@@ -30,13 +28,13 @@ public class PlayersManager {
     public void DisableControl()
     {
         movement.enabled = false;
-       // marker.gameObject.SetActive(false);      
+        marker.gameObject.SetActive(false);      
     }
 
     public void EnableControl()
     {
         movement.enabled = true;
-        //marker.gameObject.SetActive(true);
+        marker.gameObject.SetActive(true);
     }
 
     public void Reset()
