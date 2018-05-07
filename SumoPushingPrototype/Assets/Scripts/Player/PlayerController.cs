@@ -60,6 +60,8 @@ public class PlayerController : MonoBehaviour {
     {
         rb.MovePosition(rb.position + movement);
 
+        Debug.Log(movement);
+
         if (movement != Vector3.zero)
         {
             anim.SetBool("Walking", true);
