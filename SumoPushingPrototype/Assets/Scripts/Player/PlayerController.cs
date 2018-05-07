@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour {
 
     [Space][Header("Propiedades relacionadas con el movimiento del personaje")][Space]
     //Movement paramenters
-    [Range(300f, 700f)]
+    [Range(1, 20)]
     [Tooltip("Velocidad de movimiento del personaje")]
     public float movementSpeed = 10f;
     [Tooltip("Velocidad de rotacion del personaje")]
@@ -68,8 +68,9 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        currentState.UpdateState();
-	}
+        if (inputNumber > 0)
+            currentState.UpdateState();
+    }
 
     private void FixedUpdate()
     {
@@ -78,30 +79,24 @@ public class PlayerController : MonoBehaviour {
 
     public void Move(Vector3 movement)
     {
-
         rb.MovePosition(rb.position + movement);
-
-        Debug.Log(movement);
-
-
-        //rb.MovePosition(rb.position + movement);
-        Vector3 newMove;
+        //Vector3 newMove;
 
         if (movement != Vector3.zero)
         {     
             anim.SetBool("Walking", true);
-            newMove = new Vector3(movement.x, rb.velocity.y, movement.z);
+            /*newMove = new Vector3(movement.x, rb.velocity.y, movement.z);
             rb.velocity = newMove + appliedForces;
-            //particles.Play();
+            //particles.Play();*/
         }     
         else
         {
             anim.SetBool("Walking", false);
-            newMove = rb.velocity - (new Vector3(rb.velocity.x, 0f, rb.velocity.z) + appliedForces) * Time.deltaTime * dragForce;
-            rb.velocity = newMove;
+           /* newMove = rb.velocity - (new Vector3(rb.velocity.x, 0f, rb.velocity.z) + appliedForces) * Time.deltaTime * dragForce;
+            rb.velocity = newMove;*/
         }
 
-        appliedForces -= appliedForces * Time.deltaTime * dragForce;
+        //appliedForces -= appliedForces * Time.deltaTime * dragForce;
     }
 
     public void Turn(Quaternion rot)
@@ -118,14 +113,14 @@ public class PlayerController : MonoBehaviour {
     public void Pushed(Vector3 direction, float force)
     {
         
-       /* Vector3 dir;
+       Vector3 dir;
         if (direction != Vector3.zero)
             dir = direction;
         else
             dir = transform.forward;
 
-        rb.AddForce(transform.forward * force, ForceMode.Impulse);*/
+        rb.AddForce(transform.forward * force, ForceMode.Impulse);
 
-        appliedForces = direction * force;
+        //appliedForces = direction * force;
     }
 }

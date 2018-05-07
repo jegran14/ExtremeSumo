@@ -9,12 +9,13 @@ public class EleccionPersonaje : MonoBehaviour
     private GameObject[] characterList;
     public GameObject canvas;
     private bool isActive;
-    private bool isReady;
+    public bool isReady;
     private int index;
     public int player;
     public Text text;
     public Button button;
     private Animator anim;
+
 
     // Use this for initialization
     void Start()
@@ -71,6 +72,12 @@ public class EleccionPersonaje : MonoBehaviour
         //Activar personaje siguiente
         characterList[index].SetActive(true);
     }
+
+    public int GetCharacter()
+    {
+        return index;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -79,7 +86,7 @@ public class EleccionPersonaje : MonoBehaviour
             if (isActive && (Input.GetButtonDown("Jump" + player)))
             {
                 isReady = true;
-                ready();
+                Ready();
             }
             else
             {
@@ -102,7 +109,7 @@ public class EleccionPersonaje : MonoBehaviour
         }
 
     }
-    public void ready()
+    public void Ready()
     {
         anim = button.animator;
         anim.SetBool("isReady", true);
