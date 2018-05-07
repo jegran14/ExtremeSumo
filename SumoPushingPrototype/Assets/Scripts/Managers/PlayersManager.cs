@@ -14,11 +14,11 @@ public class PlayersManager {
     public int playerInput;
     public int nWins;
 
-    private PlayerController movement;
+    private CharactersBase movement;
 
 	public void SetUp()
     {
-        movement = playerInstance.GetComponent<PlayerController>();
+        movement = playerInstance.GetComponent<CharactersBase>();
         movement.inputNumber = playerInput;     
         marker.spriteColor = playerColor;
 

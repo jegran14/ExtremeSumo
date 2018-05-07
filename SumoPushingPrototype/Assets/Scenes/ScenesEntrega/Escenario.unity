@@ -33842,9 +33842,9 @@ Prefab:
       objectReference: {fileID: 840481119}
     - target: {fileID: 114581979979581632, guid: 9d21b0d1d2b80fb489b19853f580ac30,
         type: 2}
-      propertyPath: playerMarkerPrefab
+      propertyPath: AICharacterPrefab
       value: 
-      objectReference: {fileID: 1438808715261958, guid: 65ce6545a9fa4974bb889dd78d48ecc4,
+      objectReference: {fileID: 1761040275346904, guid: f38d8725ba0b7344398bf704f273afd5,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d21b0d1d2b80fb489b19853f580ac30, type: 2}

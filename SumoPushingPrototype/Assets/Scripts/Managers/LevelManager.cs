@@ -17,7 +17,9 @@ public class LevelManager : MonoBehaviour {
     public CameraControl cameraControl;
     public GameObject canvas;
     public GameObject playerMarkerPrefab;
+    public AIDirector aiDirector;
     public GameObject playerPrefab;
+    public GameObject AICharacterPrefab;
     public Transform[] spawnPoints;
 
     //Elemento proporcionados en la selección del personaje
@@ -45,10 +47,11 @@ public class LevelManager : MonoBehaviour {
 
     public void SetUp()
     {
-        players = new PlayersManager[playerCounter];
-        markers = new PlayerMarkerController[playerCounter];
+        players = new PlayersManager[4];
+        markers = new PlayerMarkerController[4];
 
         SpawnCharacters();
+        SpawnCPUCharactes();
         SetCameraTragets();
 
         StartCoroutine(GameLoop());
@@ -56,7 +59,7 @@ public class LevelManager : MonoBehaviour {
 
     private void SpawnCharacters()
     {
-        for(int i = 0; i < playerCounter; i++)
+        for(int i = 0; i < players.Length; i++)
         {
             players[i] = new PlayersManager();
         }
@@ -84,8 +87,33 @@ public class LevelManager : MonoBehaviour {
             players[i].playerColor = playerColors[i + 1];
             players[i].playerInstance.tag = "Player" + (i + 1);
             players[i].SetUp();
+        }
+    }
 
-
+    private void SpawnCPUCharactes()
+    {
+        for(int i = playerCounter; i < players.Length; i++)
+        {
+            //Instanciar personaje del jugador
+            players[i].playerInstance =
+                (GameObject)Instantiate(AICharacterPrefab, spawnPoints[i].position, Quaternion.LookRotation(new Vector3(0f, spawnPoints[i].position.y, 0f) - spawnPoints[i].position));
+            //Instanciar marker del jugador
+            GameObject marker = Instantiate(playerMarkerPrefab, canvas.transform);
+            markers[i] = marker.GetComponent<PlayerMarkerController>();
+            markers[i].target = players[i].playerInstance.transform;
+            players[i].marker = markers[i];
+            markers[i].playerNumber.sprite = textMarkers[0];
+            //Asignar spwnpoint
+            players[i].spawnPoint = spawnPoints[i];
+            //Asignar avatar al jugador
+            players[i].playerAvatar =
+                (GameObject)Instantiate(playersAvatar[i], players[i].playerInstance.transform);
+            //Asignar Input
+            players[i].playerInput = 0;
+            //Asignar color
+            players[i].playerColor = playerColors[0];
+            players[i].playerInstance.tag = "Player" + (i + 1);
+            players[i].SetUp();
         }
     }
 
@@ -98,6 +126,7 @@ public class LevelManager : MonoBehaviour {
             targets[i] = players[i].playerInstance.transform;
         }
 
+        aiDirector.targets = targets;
         cameraControl.m_Targets = targets;
     }
 

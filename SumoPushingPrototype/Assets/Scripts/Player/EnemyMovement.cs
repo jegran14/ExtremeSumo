@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class EnemyMovement : MonoBehaviour {
-
-    public GameObject[] players;
+public class EnemyMovement : CharactersBase {
 
     private UnityEngine.AI.NavMeshAgent nav;
+    private AIDirector director;
+    private Transform thePlayer;
 
-    private GameObject thePlayer;
+   // private GameObject thePlayer;
     private Vector3 position;
     private float distance;
     private Animator anim;
@@ -46,6 +46,8 @@ public class EnemyMovement : MonoBehaviour {
         pushing = false;
         pushCounter = 0;
         pushingTimer = 0;
+
+        director = FindObjectOfType<AIDirector>();
     }
 
     // Update is called once per frame
@@ -55,14 +57,17 @@ public class EnemyMovement : MonoBehaviour {
         position = gameObject.transform.position;
         distance = Mathf.Infinity;
 
-        for (int i = 0; i < players.Length; i++)
+        for (int i = 0; i < director.targets.Length; i++)
         {
-            var diference = (position - players[i].transform.position);
-            var currentDistance = diference.sqrMagnitude;
-            if (currentDistance < distance)
+            if(director.targets[i] != this.transform)
             {
-                thePlayer = players[i];
-                distance = currentDistance;
+                Vector3 diference = (position - director.targets[i].position);
+                float currentDistance = diference.sqrMagnitude;
+                if (currentDistance < distance)
+                {
+                    thePlayer = director.targets[i];
+                    distance = currentDistance;
+                }
             }
         }
 

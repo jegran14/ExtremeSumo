@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : CharactersBase {
     //Player Number
     [Header("Propiedades relacionadas con el jugador")][Space]
     [Tooltip("Numero de jugador")]
     public int player;
-    [Tooltip("Numero de input asignado")]
-    public int inputNumber;
+   /* [Tooltip("Numero de input asignado")]
+    public int inputNumber;*/
 
     [Space][Header("Propiedades relacionadas con el movimiento del personaje")][Space]
     //Movement paramenters
