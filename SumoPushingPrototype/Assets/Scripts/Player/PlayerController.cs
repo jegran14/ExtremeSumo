@@ -4,18 +4,35 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
     //Player Number
+    [Header("Propiedades relacionadas con el jugador")][Space]
+    [Tooltip("Numero de jugador")]
     public int player;
+    [Tooltip("Numero de input asignado")]
     public int inputNumber;
 
+    [Space][Header("Propiedades relacionadas con el movimiento del personaje")][Space]
     //Movement paramenters
+    [Range(300f, 700f)]
+    [Tooltip("Velocidad de movimiento del personaje")]
     public float movementSpeed = 10f;
+    [Tooltip("Velocidad de rotacion del personaje")]
     public float turnSpeed = 20f;
+    [Tooltip("Fuerza de rozamiento aplicada al movimiento y las fuerzas")]
+    [Range(0.3f, 3f)]
+    public float dragForce = 10f;
 
+    [Space][Header("Propiedades relacionadas con el empuje del personaje")][Space]
     //Push parameters
+    [Tooltip("Fuerza con la que el personaje se empuja a si mismo y a otros personajes")]
+    [Range(5f, 30f)]
     public float pushForce = 10f;
+    [Tooltip("Numero de empujes maximo que el personaje puede hacer dentro de una ventana de tiempo")]
     public int numberOfPushes = 2;
+    [Tooltip("Tiempo durante el que el personaje esta empujando a otros")]
     public float pushingTime = 1f;
+    [Tooltip("Radio del area de empuje")]
     public float pushRadius = 1f;
+    private Vector3 appliedForces;
 
     //Character States
     [HideInInspector] public NormalState normalState;
@@ -28,7 +45,8 @@ public class PlayerController : MonoBehaviour {
     public int groundLayer;
 
     //Character components
-    private Rigidbody rb;
+    [HideInInspector]
+    public Rigidbody rb;
     private Animator anim;
     private ParticleSystem particles;
     
@@ -37,13 +55,15 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
         rb = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
-       // particles = GetComponentInChildren<ParticleSystem>();
+        //particles = GetComponentInChildren<ParticleSystem>();
 
         normalState = new NormalState(this);
         currentState = normalState;
 
         pushableLayer = LayerMask.GetMask("Pushable");
         groundLayer = LayerMask.GetMask("Ground");
+
+        appliedForces = new Vector3(0f, 0f, 0f);
     }
 	
 	// Update is called once per frame
@@ -58,19 +78,30 @@ public class PlayerController : MonoBehaviour {
 
     public void Move(Vector3 movement)
     {
+<<<<<<< HEAD
         rb.MovePosition(rb.position + movement);
 
         Debug.Log(movement);
 
+=======
+        //rb.MovePosition(rb.position + movement);
+        Vector3 newMove;
+>>>>>>> Vicent
         if (movement != Vector3.zero)
-        {
+        {     
             anim.SetBool("Walking", true);
-           // particles.Play();
+            newMove = new Vector3(movement.x, rb.velocity.y, movement.z);
+            rb.velocity = newMove + appliedForces;
+            //particles.Play();
         }     
         else
         {
             anim.SetBool("Walking", false);
+            newMove = rb.velocity - (new Vector3(rb.velocity.x, 0f, rb.velocity.z) + appliedForces) * Time.deltaTime * dragForce;
+            rb.velocity = newMove;
         }
+
+        appliedForces -= appliedForces * Time.deltaTime * dragForce;
     }
 
     public void Turn(Quaternion rot)
@@ -86,12 +117,15 @@ public class PlayerController : MonoBehaviour {
 
     public void Pushed(Vector3 direction, float force)
     {
-        Vector3 dir;
+        
+       /* Vector3 dir;
         if (direction != Vector3.zero)
             dir = direction;
         else
             dir = transform.forward;
 
-        rb.AddForce(transform.forward * force, ForceMode.Impulse);
+        rb.AddForce(transform.forward * force, ForceMode.Impulse);*/
+
+        appliedForces = direction * force;
     }
 }

@@ -5,7 +5,8 @@ public class CameraControl : MonoBehaviour
     public float m_DampTime = 0.2f;                 
     public float m_ScreenEdgeBuffer = 4f;           
     public float m_MinSize = 6.5f;
-    public float cameraLimitZ = 3;              
+    public float cameraLimitZ = 3;
+    public float cameraLimitX = 3;
     /*[HideInInspector]*/ public Transform[] m_Targets; 
 
 
@@ -54,6 +55,15 @@ public class CameraControl : MonoBehaviour
             averagePos /= numTargets;
 
         averagePos.y = transform.position.y;
+
+        if(averagePos.x > cameraLimitX)
+        {
+            averagePos.x = cameraLimitX;
+        }
+        else if(averagePos.x < -cameraLimitX)
+        {
+            averagePos.x = -cameraLimitX;
+        }
 
         if (averagePos.z < cameraLimitZ)
         {
