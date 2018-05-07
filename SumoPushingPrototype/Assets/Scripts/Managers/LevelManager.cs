@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour {
@@ -32,6 +33,10 @@ public class LevelManager : MonoBehaviour {
     private WaitForSeconds startWait;
     private WaitForSeconds endWait;
 
+    //Players round winner and game winner
+    private PlayersManager roundWinner;
+    private PlayersManager gameWinner;
+
 	// Use this for initialization
 	void Start () {
         startWait = new WaitForSeconds(startDelay);
@@ -41,6 +46,9 @@ public class LevelManager : MonoBehaviour {
         markers = new PlayerMarkerController[playerCounter];
 
         SpawnCharacters();
+        SetCameraTragets();
+
+        StartCoroutine(GameLoop());
 	}
 
     private void SpawnCharacters()
@@ -55,7 +63,7 @@ public class LevelManager : MonoBehaviour {
             
             //Instanciar personaje del jugador
             players[i].playerInstance =
-                (GameObject) Instantiate(playerPrefab, spawnPoints[i].position, Quaternion.identity);
+                (GameObject) Instantiate(playerPrefab, spawnPoints[i].position, Quaternion.LookRotation(new Vector3(0f, spawnPoints[i].position.y, 0f) - spawnPoints[i].position));
             //Instanciar marker del jugador
             GameObject marker = Instantiate(playerMarkerPrefab, canvas.transform);
             markers[i] = marker.GetComponent<PlayerMarkerController>();           
@@ -87,5 +95,125 @@ public class LevelManager : MonoBehaviour {
         }
 
         cameraControl.m_Targets = targets;
+    }
+
+    private bool OnePlayerLeft()
+    {
+        int numPlayersLeft = 0;
+
+        for(int i = 0; i < players.Length; i++)
+        {
+            if (players[i].playerInstance.activeSelf)
+                numPlayersLeft++;
+        }
+
+        return numPlayersLeft <= 1; //Hará falta otra funcion si se quiere implementar el combate por equipos
+    }
+
+    private IEnumerator GameLoop()
+    {
+        yield return StartCoroutine(RoundStarting());
+        yield return StartCoroutine(RoundPlaying());
+        yield return StartCoroutine(RoundEnding());
+
+        if(gameWinner != null)
+        {
+            Debug.Log("Hey we finished");
+            SceneManager.LoadScene(0);
+        }
+        else
+        {
+            StartCoroutine(GameLoop());
+        }
+    }
+
+    private IEnumerator RoundStarting()
+    {
+        ResetAllPlayers();
+        DisablePlayerContol();
+
+        cameraControl.SetStartPositionAndSize();
+
+        /*
+         roundNumber++;
+         messageText.text = "ROUND " + roundNumber;
+         */
+
+        yield return startWait;
+    }
+
+    private IEnumerator RoundPlaying()
+    {
+        EnablePlayerContol();
+        //messageText.text = "";
+
+        while (!OnePlayerLeft())
+        {
+            yield return null;
+        }
+    }
+
+    private IEnumerator RoundEnding()
+    {
+        DisablePlayerContol();
+
+        roundWinner = null;
+        roundWinner = GetRoundWinner();
+
+        if (roundWinner != null)
+            roundWinner.nWins++;
+
+        gameWinner = GetGameWinner();
+
+        //string message = EndMessage();
+        //messageText.text = message;
+
+        yield return endWait;
+    }
+
+    private PlayersManager GetRoundWinner()
+    {
+        for(int i = 0; i < players.Length; i++)
+        {
+            if (players[i].playerInstance.activeSelf)
+                return players[i];
+        }
+
+        return null;
+    }
+
+    private PlayersManager GetGameWinner()
+    {
+        for(int i = 0; i < players.Length; i++)
+        {
+            if (players[i].nWins == roundsToWin)
+                return players[i];
+        }
+
+        return null;
+    }
+
+    private void ResetAllPlayers()
+    {
+        for(int i = 0; i < players.Length; i++)
+        {
+            players[i].Reset();
+        }
+    }
+
+    private void EnablePlayerContol()
+    {
+        for(int i = 0; i < players.Length; i++)
+        {
+            players[i].EnableControl();
+        }
+    }
+
+    private void DisablePlayerContol()
+    {
+        for (int i = 0; i < players.Length; i++)
+        {
+            players[i].DisableControl();
+        }
     }
 }

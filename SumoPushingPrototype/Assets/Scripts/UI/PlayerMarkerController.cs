@@ -20,14 +20,19 @@ public class PlayerMarkerController : MonoBehaviour {
     {
         image = GetComponent<Image>();
         image.color = spriteColor;
-        if(target != null)
+
+        if (target.gameObject.activeSelf)
             MoveToTarget();
+        else
+            this.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update () {
-        if(target != null)
+        if (target.gameObject.activeSelf)
             MoveToTarget();
+        else
+            this.gameObject.SetActive(false);
     }
 
     private void MoveToTarget()
