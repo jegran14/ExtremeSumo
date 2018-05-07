@@ -78,15 +78,15 @@ public class PlayerController : MonoBehaviour {
 
     public void Move(Vector3 movement)
     {
-<<<<<<< HEAD
+
         rb.MovePosition(rb.position + movement);
 
         Debug.Log(movement);
 
-=======
+
         //rb.MovePosition(rb.position + movement);
         Vector3 newMove;
->>>>>>> Vicent
+
         if (movement != Vector3.zero)
         {     
             anim.SetBool("Walking", true);
