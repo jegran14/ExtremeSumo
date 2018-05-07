@@ -31,13 +31,13 @@ public class NormalState : ICharacterState
 
     public void UpdateState()
     {
-        float horizontal = Input.GetAxis("Horizontal" + thePlayer.player);
-        float vertical = Input.GetAxis("Vertical" + thePlayer.player);
+        float horizontal = Input.GetAxis("Horizontal" + thePlayer.inputNumber);
+        float vertical = Input.GetAxis("Vertical" + thePlayer.inputNumber);
 
         movementInput = new Vector3(horizontal, 0.0f, vertical);
         movementInput = movementInput.normalized;
 
-        if (Input.GetButtonDown("Jump" + thePlayer.player) && pushCounter < thePlayer.numberOfPushes)
+        if (Input.GetButtonDown("Jump" + thePlayer.inputNumber) && pushCounter < thePlayer.numberOfPushes)
         {
             Push();
         }
@@ -85,14 +85,12 @@ public class NormalState : ICharacterState
     {
         if (pushingTimer <= thePlayer.pushingTime)
         {
-            Collider[] colliders = Physics.OverlapSphere(thePlayer.transform.position, thePlayer.pushRadius, thePlayer.pushableLayer);
+            Collider[] colliders = Physics.OverlapBox(thePlayer.transform.position, new Vector3(2.5f, 1f, 1.5f), thePlayer.transform.rotation, thePlayer.pushableLayer);
+           // Collider[] colliders = Physics.OverlapSphere(thePlayer.transform.position, thePlayer.pushRadius, thePlayer.pushableLayer);
 
             for(int i = 0; i < colliders.Length; i++)
             {
                 if (colliders[i].tag == thePlayer.tag) { continue; }
-<<<<<<< HEAD
-                Debug.Log(colliders[i].tag);
-=======
                 
                /* PlayerController targetPlayer = colliders[i].GetComponent<PlayerController>();
 
@@ -108,19 +106,12 @@ public class NormalState : ICharacterState
                 Vector3 dir = targetPlayer.transform.position - thePlayer.transform.position;
                 dir = dir.normalized;
                 targetPlayer.Pushed(dir, thePlayer.pushForce);*/
->>>>>>> 76dd5f64ad8d533618fc283129160029051879a8
 
                 Rigidbody target = colliders[i].GetComponent<Rigidbody>();
 
                 if (!target) continue;
-<<<<<<< HEAD
-
-                target.AddExplosionForce(thePlayer.pushForce * 10, thePlayer.transform.position, thePlayer.pushRadius * 1.5f);
-
-=======
                 Debug.Log("Yeh");
                 target.AddExplosionForce(thePlayer.pushForce, thePlayer.transform.position, thePlayer.pushRadius * 1.5f, 0f);
->>>>>>> 76dd5f64ad8d533618fc283129160029051879a8
             }
 
             pushingTimer += Time.deltaTime;

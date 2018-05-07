@@ -8,17 +8,13 @@ public class MainMenu : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-<<<<<<< HEAD
-		
-=======
         gameManager = FindObjectOfType<GameManager>();
->>>>>>> 76dd5f64ad8d533618fc283129160029051879a8
 	}
 
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+    // Update is called once per frame
+    void Update() {
+
 	}
 
     public void LevelPradera()

@@ -631,12 +631,13 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 266943a2-27aa-46cd-bb42-beee26568b8a
+  cloudProjectId: 124a5c90-02b0-4a71-953c-f0b8932a0d97
   projectName: SumoPushingPrototype
-  organizationId: cric_cric
+  organizationId: craitom
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
