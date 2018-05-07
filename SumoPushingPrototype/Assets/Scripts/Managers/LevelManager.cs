@@ -47,11 +47,11 @@ public class LevelManager : MonoBehaviour {
 
     public void SetUp()
     {
-        players = new PlayersManager[4];
-        markers = new PlayerMarkerController[4];
+        players = new PlayersManager[playerCounter];
+        markers = new PlayerMarkerController[playerCounter];
 
         SpawnCharacters();
-        SpawnCPUCharactes();
+        //SpawnCPUCharactes();
         SetCameraTragets();
 
         StartCoroutine(GameLoop());

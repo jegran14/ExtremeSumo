@@ -190,7 +190,8 @@ MonoBehaviour:
   aiDirector: {fileID: 114628604416412856}
   playerPrefab: {fileID: 1761040275346904, guid: f38d8725ba0b7344398bf704f273afd5,
     type: 2}
-  AICharacterPrefab: {fileID: 0}
+  AICharacterPrefab: {fileID: 1630713074138464, guid: b9c4c8ac7a7bf354994350bb8de35cea,
+    type: 2}
   spawnPoints:
   - {fileID: 4355099564510712}
   - {fileID: 4816289413793418}
