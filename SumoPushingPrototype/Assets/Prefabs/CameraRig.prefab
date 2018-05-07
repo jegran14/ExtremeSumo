@@ -130,6 +130,7 @@ MonoBehaviour:
   m_ScreenEdgeBuffer: 4
   m_MinSize: 6.5
   cameraLimitZ: 3
+  cameraLimitX: 3
   m_Targets:
   - {fileID: 0}
   - {fileID: 0}

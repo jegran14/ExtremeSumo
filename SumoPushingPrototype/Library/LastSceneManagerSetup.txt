@@ -1,1 +1,16 @@
+<<<<<<< HEAD
 sceneSetups: []
+=======
+sceneSetups:
+<<<<<<< HEAD
+- path: Assets/Scenes/ScenesEntrega/Intro.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/UI_Character_Selection.unity
+=======
+- path: Assets/Scenes/Escenario.unity
+>>>>>>> master
+>>>>>>> 575f2aee51d37e15982c0a548ed79c2268926e1d
+  isLoaded: 1
+  isActive: 1
+>>>>>>> 76dd5f64ad8d533618fc283129160029051879a8
