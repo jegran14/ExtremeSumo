@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Base path: D:/unity/Editor/Data
 Cmd: initializeCompiler
 Cmd: compileSnippet
@@ -40,3 +41,19 @@ Cmd: compileSnippet
   api=4 type=0 insize=1272 outsize=1626 kw=DIRECTIONAL _EMISSION pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: disassembleShader
   api=4 insize=1626 outsize=2924 ok=1
+=======
+Base path: D:/Programas/Unity5/Editor/Data
+Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  api=4 insize=617 outsize=3497 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=617 outsize=3701 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=617 outsize=3701 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=617 outsize=3257 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=617 outsize=2453 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=237 outsize=2909 ok=1
+>>>>>>> master

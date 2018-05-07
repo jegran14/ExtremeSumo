@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/UI_Character_Selection.unity
+=======
+- path: Assets/Scenes/Escenario.unity
+>>>>>>> master
   isLoaded: 1
   isActive: 1
