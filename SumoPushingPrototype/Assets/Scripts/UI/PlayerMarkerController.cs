@@ -10,6 +10,8 @@ public class PlayerMarkerController : MonoBehaviour {
     public float marginOffset = 50f;
     public float speedRotation = 10f;
 
+    public Image playerNumber;
+
     public float verticalOffset = 2f;
 
     private Image image;
@@ -18,13 +20,15 @@ public class PlayerMarkerController : MonoBehaviour {
     {
         image = GetComponent<Image>();
         image.color = spriteColor;
-        MoveToTarget();
+        if(target != null)
+            MoveToTarget();
     }
 
     // Update is called once per frame
     void Update () {
-        MoveToTarget();
-	}
+        if(target != null)
+            MoveToTarget();
+    }
 
     private void MoveToTarget()
     {
