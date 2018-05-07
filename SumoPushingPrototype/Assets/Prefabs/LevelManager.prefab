@@ -65,6 +65,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4242233407713218}
   - component: {fileID: 114581979979581632}
+  - component: {fileID: 114628604416412856}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -184,10 +185,12 @@ MonoBehaviour:
   - {fileID: 21300008, guid: 478f5c91093eb9844b5e7fdd567b427b, type: 3}
   cameraControl: {fileID: 0}
   canvas: {fileID: 0}
-  playerMarkerPrefab: {fileID: 1761040275346904, guid: f38d8725ba0b7344398bf704f273afd5,
+  playerMarkerPrefab: {fileID: 1438808715261958, guid: 65ce6545a9fa4974bb889dd78d48ecc4,
     type: 2}
+  aiDirector: {fileID: 114628604416412856}
   playerPrefab: {fileID: 1761040275346904, guid: f38d8725ba0b7344398bf704f273afd5,
     type: 2}
+  AICharacterPrefab: {fileID: 0}
   spawnPoints:
   - {fileID: 4355099564510712}
   - {fileID: 4816289413793418}
@@ -195,4 +198,17 @@ MonoBehaviour:
   - {fileID: 4515005795992284}
   playersAvatar: []
   playerAsignations: 
+  playerCounter: 2
   players: []
+--- !u!114 &114628604416412856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1634823197052990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01f93fef79c4246468f926a835589d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targets: []

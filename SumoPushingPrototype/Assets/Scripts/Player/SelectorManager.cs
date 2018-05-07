@@ -21,10 +21,14 @@ public class SelectorManager : MonoBehaviour {
         {
             if (Input.GetButtonDown("Jump" + 1) || Input.GetButtonDown("Jump" + 2) || Input.GetButtonDown("Jump" + 3) || Input.GetButtonDown("Jump" + 4))
             {
-                GameObject[] avatar = new GameObject[contador];
+                GameObject[] avatar = new GameObject[4];
                 for (int i = 0; i < contador; i++)
                 {
                     avatar[i] = charactersPrefabs[eleccionPersonaje[i].GetCharacter()];
+                }
+                for(int i = contador; i < playerList.Length; i++)
+                {
+                    avatar[i] = charactersPrefabs[Random.Range(0, 20)];
                 }
 
                 FindObjectOfType<GameManager>().FromCharToLevels(contador, playerList, avatar, nextMenu);
