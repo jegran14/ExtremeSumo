@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -110,7 +110,11 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
+<<<<<<< HEAD:SumoPushingPrototype/Library/CurrentLayout.dwlt
   controlID: 8921
+=======
+  controlID: 1445
+>>>>>>> master:ExtremeSumo-master/SumoPushingPrototype/Library/CurrentLayout.dwlt
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -134,7 +138,11 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 421}
   m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
+<<<<<<< HEAD:SumoPushingPrototype/Library/CurrentLayout.dwlt
   controlID: 8922
+=======
+  controlID: 1623
+>>>>>>> master:ExtremeSumo-master/SumoPushingPrototype/Library/CurrentLayout.dwlt
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -153,8 +161,8 @@ MonoBehaviour:
     y: 0
     width: 887
     height: 305
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -208,7 +216,11 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
+<<<<<<< HEAD:SumoPushingPrototype/Library/CurrentLayout.dwlt
   controlID: 8952
+=======
+  controlID: 1573
+>>>>>>> master:ExtremeSumo-master/SumoPushingPrototype/Library/CurrentLayout.dwlt
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -227,8 +239,8 @@ MonoBehaviour:
     y: 0
     width: 473
     height: 384
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -385,6 +397,7 @@ MonoBehaviour:
     height: 284
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
+<<<<<<< HEAD:SumoPushingPrototype/Library/CurrentLayout.dwlt
   lastFramingTime: 9654.781660975796
   m_2DMode: 0
   m_isRotationLocked: 0
@@ -393,6 +406,16 @@ MonoBehaviour:
     m_Target: {x: -1.9684849, y: -0.18641102, z: -8.437522}
     speed: 2
     m_Value: {x: -1.9684849, y: -0.18641102, z: -8.437522}
+=======
+  lastFramingTime: 1097.7561707256127
+  m_2DMode: 1
+  m_isRotationLocked: 0
+  m_AudioPlay: 0
+  m_Position:
+    m_Target: {x: 548, y: 302, z: 0}
+    speed: 2
+    m_Value: {x: 548, y: 302, z: 0}
+>>>>>>> master:ExtremeSumo-master/SumoPushingPrototype/Library/CurrentLayout.dwlt
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -424,9 +447,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_Size:
+<<<<<<< HEAD:SumoPushingPrototype/Library/CurrentLayout.dwlt
     m_Target: 9.138741
     speed: 2
     m_Value: 9.138741
+=======
+    m_Target: 1166.7262
+    speed: 2
+    m_Value: 1166.7262
+>>>>>>> master:ExtremeSumo-master/SumoPushingPrototype/Library/CurrentLayout.dwlt
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -464,10 +493,17 @@ MonoBehaviour:
     height: 363
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
+<<<<<<< HEAD:SumoPushingPrototype/Library/CurrentLayout.dwlt
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: b6450000
     m_LastClickedID: 17846
     m_ExpandedIDs: ccf9ffff3cfaffff00000000b6450000
+=======
+    scrollPos: {x: 0, y: 54}
+    m_SelectedIDs: 8a6c0000
+    m_LastClickedID: 27786
+    m_ExpandedIDs: ee69ffff00000000a86b0000
+>>>>>>> master:ExtremeSumo-master/SumoPushingPrototype/Library/CurrentLayout.dwlt
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -528,20 +564,35 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
+<<<<<<< HEAD:SumoPushingPrototype/Library/CurrentLayout.dwlt
     - Assets/Materials
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
   - Assets/Materials
+=======
+    - Assets/Scripts
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Scripts
+>>>>>>> master:ExtremeSumo-master/SumoPushingPrototype/Library/CurrentLayout.dwlt
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\UJI\Unity\ExtremeSumo\SumoPushingPrototype
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD:SumoPushingPrototype/Library/CurrentLayout.dwlt
     scrollPos: {x: 0, y: 71}
     m_SelectedIDs: 36350000
     m_LastClickedID: 13622
     m_ExpandedIDs: 00000000b42e0000d02e00007a2f000094300000223200007434000052350000b8350000f43700004c380000043a0000083a0000843a0000d43a0000d63a00000e3b0000363d0000f44b0000f64b0000f84b0000fa4b0000fc4b0000fe4b0000004c0000024c0000044c0000064c0000084c00000a4c00000c4c00000e4c0000104c0000124c0000144c0000164c0000184c00001a4c000000ca9a3bffffff7f
+=======
+    scrollPos: {x: 0, y: 159}
+    m_SelectedIDs: 7c640000
+    m_LastClickedID: 25724
+    m_ExpandedIDs: 00000000a85f0000b65f0000ec5f00006a6000000c610000e06100003c62000056620000d2620000606300009063000052640000546400007c640000a6640000a8640000c2640000da65000018660000887500008a7500008c7500008e75000090750000927500009475000096750000987500009a7500009c7500009e750000a0750000a2750000a4750000a6750000a8750000aa750000ac750000ae75000000ca9a3bffffff7f
+>>>>>>> master:ExtremeSumo-master/SumoPushingPrototype/Library/CurrentLayout.dwlt
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -569,7 +620,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD:SumoPushingPrototype/Library/CurrentLayout.dwlt
     m_ExpandedIDs: 00000000b42e0000d02e00007a2f000094300000223200007434000052350000b8350000f43700004c380000043a0000083a0000843a0000d43a0000d63a00000e3b0000363d0000f44b0000f64b0000f84b0000fa4b0000fc4b0000fe4b0000004c0000024c0000044c0000064c0000084c00000a4c00000c4c00000e4c0000104c0000124c0000144c0000164c0000184c00001a4c000000ca9a3bffffff7f
+=======
+    m_ExpandedIDs: 00000000a85f0000b65f0000ec5f00006a6000000c610000e06100003c62000056620000d2620000f862000060630000906300005264000054640000a6640000a8640000c2640000da65000018660000887500008a7500008c7500008e75000090750000927500009475000096750000987500009a7500009c7500009e750000a0750000a2750000a4750000a6750000a8750000aa750000ac750000ae75000000ca9a3bffffff7f
+>>>>>>> master:ExtremeSumo-master/SumoPushingPrototype/Library/CurrentLayout.dwlt
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -596,8 +651,13 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
+<<<<<<< HEAD:SumoPushingPrototype/Library/CurrentLayout.dwlt
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 9c340000
+=======
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: 9c3400007a080000
+>>>>>>> master:ExtremeSumo-master/SumoPushingPrototype/Library/CurrentLayout.dwlt
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -621,7 +681,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 74}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 110
 --- !u!114 &17
