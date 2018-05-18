@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SelectorManager : MonoBehaviour {
 
@@ -8,13 +9,20 @@ public class SelectorManager : MonoBehaviour {
     public EleccionPersonaje [] eleccionPersonaje;
     private int contador;
 
+    public GameObject canvasStart;
     public GameObject nextMenu;
     public GameObject[] charactersPrefabs;
+    private Animator anim;
+    public Button startButton;
+
 	// Use this for initialization
 	void Start () {
         playerList = new int[4];
         contador = 0;
-	}
+        canvasStart.SetActive(true);
+        anim = startButton.GetComponent<Animator>();
+
+    }
 	// Update is called once per frame
 	void Update () {
         if (AllPlayersReady())
@@ -53,8 +61,18 @@ public class SelectorManager : MonoBehaviour {
             PlayerAsign(4);
         }
     }
+
+    public void DesactivarCanvas()
+    {
+        canvasStart.SetActive(false);
+    }
+
     private void PlayerAsign(int currentPlayer)
     {
+        if (canvasStart.activeInHierarchy)
+        {
+            anim.SetTrigger("Normal");
+        }
         int i;
         for (i = 0; i < playerList.Length; i++)
         {
@@ -66,6 +84,9 @@ public class SelectorManager : MonoBehaviour {
         if (contador < 3)
         {
             playerList[contador] = currentPlayer;
+            eleccionPersonaje[contador].canvas.SetActive(true);
+            if (eleccionPersonaje[contador].characterList[0])
+                eleccionPersonaje[contador].characterList[0].SetActive(true);
             eleccionPersonaje[contador].player = currentPlayer;
             contador++;
         }

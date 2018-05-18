@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class EleccionPersonaje : MonoBehaviour
 {
-
-    private GameObject[] characterList;
+   
     public GameObject canvas;
     private bool isActive;
     public bool isReady;
@@ -15,7 +14,8 @@ public class EleccionPersonaje : MonoBehaviour
     public Text text;
     public Button button;
     private Animator anim;
-
+    [HideInInspector]
+    public GameObject[] characterList;
 
     // Use this for initialization
     void Start()
@@ -90,13 +90,7 @@ public class EleccionPersonaje : MonoBehaviour
             }
             else
             {
-                if (Input.GetButtonDown("Jump" + player))
-                {
-                    isActive = true;
-                    canvas.SetActive(true);
-                    if (characterList[0])
-                        characterList[0].SetActive(true);
-                }
+                isActive = true;
                 if (Input.GetButtonDown("Left" + player))
                 {
                     ToggleLeft();
