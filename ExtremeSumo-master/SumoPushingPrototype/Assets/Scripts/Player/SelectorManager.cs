@@ -54,11 +54,11 @@ public class SelectorManager : MonoBehaviour {
         }
         else if (Input.GetButtonDown("Jump" + 3))
         {
-            PlayerAsign(3);
+            PlayerAsign(3);        
         }
         else if (Input.GetButtonDown("Jump" + 4))
         {
-            PlayerAsign(4);
+            PlayerAsign(4);           
         }
     }
 
@@ -88,6 +88,12 @@ public class SelectorManager : MonoBehaviour {
             if (eleccionPersonaje[contador].characterList[0])
                 eleccionPersonaje[contador].characterList[0].SetActive(true);
             eleccionPersonaje[contador].player = currentPlayer;
+            if (currentPlayer == 3 || currentPlayer == 1)
+                eleccionPersonaje[contador].ActivarBotones(0, 0);
+            else if (currentPlayer == 2)
+                eleccionPersonaje[contador].ActivarBotones(1, 1);
+            else if (currentPlayer == 4)
+                eleccionPersonaje[contador].ActivarBotones(2, 2);
             contador++;
         }
 
