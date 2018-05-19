@@ -8,8 +8,6 @@ public class ModoPitufo : MonoBehaviour {
     public float time;
     public float force;
     public Vector3 scale;
-    private PowerUp power;
-
     // Use this for initialization
     public void StartPowerUp(PlayerController player)
     {
@@ -36,9 +34,7 @@ public class ModoPitufo : MonoBehaviour {
         Debug.Log("Reducir");
         player.transform.localScale += scale;
         player.pushForce += force;
-        power.active = false;
         //Devolver a condiciones normales
     }
-
 }
 

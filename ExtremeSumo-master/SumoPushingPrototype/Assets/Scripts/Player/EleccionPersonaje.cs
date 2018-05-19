@@ -5,20 +5,17 @@ using UnityEngine.UI;
 
 public class EleccionPersonaje : MonoBehaviour
 {
-    private Animator anim;
-    private int index;
-    private bool isActive;
 
+    private GameObject[] characterList;
     public GameObject canvas;
+    private bool isActive;
     public bool isReady;
+    private int index;
     public int player;
     public Text text;
     public Button button;
-    public GameObject[] leftButton;
-    public GameObject[] rightButton;
-    
-    [HideInInspector]
-    public GameObject[] characterList;
+    private Animator anim;
+
 
     // Use this for initialization
     void Start()
@@ -44,17 +41,6 @@ public class EleccionPersonaje : MonoBehaviour
      /*   //Activamos el primer personaje
         if (characterList[0])
             characterList[0].SetActive(true);*/
-    }
-
-    public void ActivarBotones(int left, int right)
-    {
-        Debug.Log(left);
-        Debug.Log(right);
-        leftButton[left].SetActive(true);
-      
-        rightButton[right].SetActive(true);
-        Debug.Log(rightButton[right]);
-        Debug.Log(rightButton[right].activeInHierarchy);
     }
 
     public void ToggleLeft()
@@ -104,7 +90,13 @@ public class EleccionPersonaje : MonoBehaviour
             }
             else
             {
-                isActive = true;
+                if (Input.GetButtonDown("Jump" + player))
+                {
+                    isActive = true;
+                    canvas.SetActive(true);
+                    if (characterList[0])
+                        characterList[0].SetActive(true);
+                }
                 if (Input.GetButtonDown("Left" + player))
                 {
                     ToggleLeft();
@@ -121,7 +113,7 @@ public class EleccionPersonaje : MonoBehaviour
     {
         anim = button.animator;
         anim.SetBool("isReady", true);
-        text.fontSize = 41;
+        text.fontSize = 28;
         text.text = "Ready!!";
         text.color = Color.red;
     }
