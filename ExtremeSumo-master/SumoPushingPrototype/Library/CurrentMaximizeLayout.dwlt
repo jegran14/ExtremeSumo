@@ -22,6 +22,7 @@ MonoBehaviour:
     width: 1920
     height: 947
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
@@ -32,6 +33,12 @@ MonoBehaviour:
   vertical: 0
   controlID: 11009
 >>>>>>> parent of d8a34052... Cambios en power ups
+=======
+  m_MinSize: {x: 709, y: 471}
+  m_MaxSize: {x: 18004, y: 14021}
+  vertical: 0
+  controlID: 1073
+>>>>>>> parent of aa56ff08... Tiempos dentro del nivel
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -55,7 +62,7 @@ MonoBehaviour:
     x: 0
 <<<<<<< HEAD
     y: 397
-    width: 889
+    width: 1096
     height: 621
 =======
     y: 339
@@ -72,8 +79,13 @@ MonoBehaviour:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_HBaseRangeMin: -444.5
     m_HBaseRangeMax: 444.5
+=======
+    m_HBaseRangeMin: -548
+    m_HBaseRangeMax: 548
+>>>>>>> parent of aa56ff08... Tiempos dentro del nivel
     m_VBaseRangeMin: -302
     m_VBaseRangeMax: 302
 =======
@@ -99,6 +111,7 @@ MonoBehaviour:
       x: 0
       y: 17
 <<<<<<< HEAD
+<<<<<<< HEAD
       width: 889
       height: 604
     m_Scale: {x: 1, y: 1}
@@ -109,6 +122,12 @@ MonoBehaviour:
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 420.5, y: 331}
 >>>>>>> parent of d8a34052... Cambios en power ups
+=======
+      width: 1096
+      height: 604
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 548, y: 302}
+>>>>>>> parent of aa56ff08... Tiempos dentro del nivel
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -116,9 +135,13 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
       x: -444.5
+=======
+      x: -548
+>>>>>>> parent of aa56ff08... Tiempos dentro del nivel
       y: -302
-      width: 889
+      width: 1096
       height: 604
 =======
       x: -420.5
@@ -131,10 +154,14 @@ MonoBehaviour:
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LastWindowPixelSize: {x: 889, y: 621}
 =======
   m_LastWindowPixelSize: {x: 841, y: 679}
 >>>>>>> parent of d8a34052... Cambios en power ups
+=======
+  m_LastWindowPixelSize: {x: 1096, y: 621}
+>>>>>>> parent of aa56ff08... Tiempos dentro del nivel
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -157,11 +184,16 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 891
+=======
+    width: 1098
+>>>>>>> parent of aa56ff08... Tiempos dentro del nivel
     height: 947
-  m_MinSize: {x: 202, y: 442}
-  m_MaxSize: {x: 4002, y: 8042}
+  m_MinSize: {x: 202, y: 421}
+  m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
+<<<<<<< HEAD
   controlID: 31447
 =======
     width: 843
@@ -171,6 +203,9 @@ MonoBehaviour:
   vertical: 1
   controlID: 11010
 >>>>>>> parent of d8a34052... Cambios en power ups
+=======
+  controlID: 1277
+>>>>>>> parent of aa56ff08... Tiempos dentro del nivel
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -188,10 +223,14 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 891
+=======
+    width: 1098
+>>>>>>> parent of aa56ff08... Tiempos dentro del nivel
     height: 305
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 5}
   m_Panes:
   - {fileID: 5}
@@ -231,6 +270,7 @@ MonoBehaviour:
     x: 0
     y: 92
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 889
     height: 284
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -256,6 +296,20 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 1.7236634, y: 7.590495, z: 0.07930946}
 >>>>>>> parent of d8a34052... Cambios en power ups
+=======
+    width: 1096
+    height: 284
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_SceneLighting: 1
+  lastFramingTime: 5133.569601584708
+  m_2DMode: 1
+  m_isRotationLocked: 0
+  m_AudioPlay: 0
+  m_Position:
+    m_Target: {x: 535.5, y: 507, z: 0}
+    speed: 2
+    m_Value: {x: 535.5, y: 507, z: 0}
+>>>>>>> parent of aa56ff08... Tiempos dentro del nivel
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -275,21 +329,26 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
     yGrid:
-      m_Target: 1
-      speed: 2
-      m_Value: 1
-    zGrid:
       m_Target: 0
       speed: 2
       m_Value: 0
+    zGrid:
+      m_Target: 1
+      speed: 2
+      m_Value: 1
   m_Rotation:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: -0.23306571, y: 0.22285315, z: -0.05496391, w: -0.94497925}
+=======
+    m_Target: {x: 0, y: 0, z: 0, w: 1}
+>>>>>>> parent of aa56ff08... Tiempos dentro del nivel
     speed: 2
-    m_Value: {x: -0.23306571, y: 0.22285314, z: -0.05496391, w: -0.94497925}
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 40.41136
+    m_Target: 880.9459
     speed: 2
+<<<<<<< HEAD
     m_Value: 40.41136
 =======
     m_Target: {x: -0.2724188, y: -0.05135318, z: 0.014561699, w: -0.9606987}
@@ -300,10 +359,13 @@ MonoBehaviour:
     speed: 2
     m_Value: 28.58819
 >>>>>>> parent of d8a34052... Cambios en power ups
+=======
+    m_Value: 880.9459
+>>>>>>> parent of aa56ff08... Tiempos dentro del nivel
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_ShowGlobalGrid: 1
   m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
@@ -411,7 +473,7 @@ MonoBehaviour:
     x: 0
 <<<<<<< HEAD
     y: 305
-    width: 891
+    width: 1098
     height: 642
 =======
     y: 247
@@ -442,14 +504,18 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 891
+=======
+    x: 1098
+>>>>>>> parent of aa56ff08... Tiempos dentro del nivel
     y: 0
-    width: 477
+    width: 403
     height: 947
-  m_MinSize: {x: 234, y: 492}
-  m_MaxSize: {x: 10004, y: 14042}
+  m_MinSize: {x: 230, y: 471}
+  m_MaxSize: {x: 10000, y: 14021}
   vertical: 1
-  controlID: 31421
+  controlID: 1074
 --- !u!114 &8
 =======
     x: 843
@@ -478,10 +544,14 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 477
+=======
+    width: 403
+>>>>>>> parent of aa56ff08... Tiempos dentro del nivel
     height: 384
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 9}
 =======
     width: 658
@@ -515,13 +585,18 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 893
+=======
+    x: 1100
+>>>>>>> parent of aa56ff08... Tiempos dentro del nivel
     y: 92
-    width: 473
+    width: 399
     height: 363
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: f8190000
     m_LastClickedID: 0
     m_ExpandedIDs: 960bf4ff1253f4ff826af4ff7c7cf4ffd286f4ff8898f4ff5e17f5ffc02ff5ff9a6af5ff1e79f5ffcc8bf5ff1ea2f5ff2aabf5ff52b8f5ff38d2f5ffb4e9f5ff36fff5ff9011f6ff0c25f6ffb43af6ff8a51f6ff7868f6ff988af6ffce93f6ffb298f6ffc2bdf6ffb0cff6ffd0e1f6ff8cf5f6ff1279f7fff09ef7ff40cbf7ffc41bf8ffdc44f8ffa45cf8ffaa77f8ff148df8ff88aef8ff26d1f8ffce18f9ff8434f9ff3079f9ff7c97f9ff80def9ffc8f6f9ff823afaff064bfaff5888faff1ae2fcff1ce2fcff76e2fcff10eafcfff6fbfcff763efdffea64fdffce7bfdffa8a0fdff84affdffd2b5fdff06ebfdffce02feff900afefff01bfeffae2bfeffde35feffb451feffd056feff7062feff549afeff86affeff58ecfeff3e1afffffa54ffff0475ffff067affff72c9ffffeefbffff000000006c6300001864000092640000aa680000660c0100d84e010014580100ac5c0100f45c0100265e01005c5f010008600100
@@ -537,6 +612,11 @@ MonoBehaviour:
     m_LastClickedID: 17108
     m_ExpandedIDs: eefbffff00000000924100009e420000944300008c440000bc4700001e480000404800009248000058490000584a00004c4b0000584c0000624e0000
 >>>>>>> parent of d8a34052... Cambios en power ups
+=======
+    m_SelectedIDs: 20710000
+    m_LastClickedID: 28960
+    m_ExpandedIDs: ee69ffff00000000a86b0000
+>>>>>>> parent of aa56ff08... Tiempos dentro del nivel
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -610,10 +690,14 @@ MonoBehaviour:
     x: 0
     y: 384
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 477
 =======
     width: 658
 >>>>>>> parent of d8a34052... Cambios en power ups
+=======
+    width: 403
+>>>>>>> parent of aa56ff08... Tiempos dentro del nivel
     height: 563
   m_MinSize: {x: 230, y: 250}
   m_MaxSize: {x: 10000, y: 10000}
@@ -643,6 +727,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 893
     y: 476
     width: 473
@@ -651,6 +736,11 @@ MonoBehaviour:
     y: 476
     width: 654
 >>>>>>> parent of d8a34052... Cambios en power ups
+=======
+    x: 1100
+    y: 476
+    width: 399
+>>>>>>> parent of aa56ff08... Tiempos dentro del nivel
     height: 542
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
@@ -666,16 +756,21 @@ MonoBehaviour:
     m_SearchArea: 0
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Scenes/ScenesEntrega
+=======
+    - Assets/Scenes/Escenario
+>>>>>>> parent of aa56ff08... Tiempos dentro del nivel
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes/ScenesEntrega
-  m_LastFoldersGridSize: 64
+  - Assets/Scenes/Escenario
+  m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Estudios\DDVideojuegos\Tercer Curso\Motores\Videojuego\ExtremeSumo\ExtremeSumo-master\SumoPushingPrototype
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 155}
     m_SelectedIDs: e20d0000
     m_LastClickedID: 3554
@@ -696,6 +791,12 @@ MonoBehaviour:
     m_LastClickedID: 14876
     m_ExpandedIDs: 00000000382e00004e2e0000522e0000fc2e00001c300000a6310000ea330000ce3400003a350000523500006836000074370000ce3700008239000086390000023a0000543a0000563a00008c3a0000ac3c00002a3d0000fe3d0000385500003a5500003c5500003e55000040550000425500004455000046550000485500004a5500004c5500004e55000050550000525500005455000056550000585500005a5500005c5500005e55000000ca9a3bffffff7f
 >>>>>>> parent of d8a34052... Cambios en power ups
+=======
+    scrollPos: {x: 0, y: 127}
+    m_SelectedIDs: b4620000
+    m_LastClickedID: 25268
+    m_ExpandedIDs: 00000000a85f0000b65f0000ec5f00006a6000000c610000e06100003c62000056620000d2620000f862000060630000906300005264000054640000a6640000a8640000c2640000da65000018660000887500008a7500008c7500008e75000090750000927500009475000096750000987500009a7500009c7500009e750000a0750000a2750000a4750000a6750000a8750000aa750000ac750000ae75000000ca9a3bffffff7f
+>>>>>>> parent of aa56ff08... Tiempos dentro del nivel
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -724,10 +825,14 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000cc0d0000e20d0000900e0000b00f0000181000007e13000062140000c4140000dc140000f2150000fe160000581700000c190000101900008c190000de190000e0190000181a0000381c0000b61c0000f81c00008a1d0000044f0000064f0000084f00000a4f00000c4f00000e4f0000104f0000124f0000144f0000164f0000184f00001a4f00001c4f00001e4f0000204f0000224f0000244f0000264f0000284f00002a4f000000ca9a3bffffff7f
 =======
     m_ExpandedIDs: 00000000382e00004e2e0000522e0000fc2e00001c300000a6310000ea330000ce3400003a350000523500006836000074370000ce3700008239000086390000023a0000543a0000563a00008c3a0000ac3c00002a3d0000fe3d0000385500003a5500003c5500003e55000040550000425500004455000046550000485500004a5500004c5500004e55000050550000525500005455000056550000585500005a5500005c5500005e55000000ca9a3bffffff7f
 >>>>>>> parent of d8a34052... Cambios en power ups
+=======
+    m_ExpandedIDs: 00000000a85f0000b65f0000ec5f00006a6000000c610000b2610000e06100003c62000056620000d2620000f862000060630000906300005264000054640000a6640000a8640000c2640000da65000018660000887500008a7500008c7500008e75000090750000927500009475000096750000987500009a7500009c7500009e750000a0750000a2750000a4750000a6750000a8750000aa750000ac750000ae75000000ca9a3bffffff7f
+>>>>>>> parent of aa56ff08... Tiempos dentro del nivel
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -753,8 +858,13 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedInstanceIDs: f8190000
     m_LastClickedInstanceID: 6648
+=======
+    m_SelectedInstanceIDs: 20710000
+    m_LastClickedInstanceID: 28960
+>>>>>>> parent of aa56ff08... Tiempos dentro del nivel
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 9c3400007a080000
 =======
@@ -788,7 +898,7 @@ MonoBehaviour:
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 180}
     m_GridSize: 64
-  m_DirectoriesAreaWidth: 159
+  m_DirectoriesAreaWidth: 175
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -804,9 +914,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1368
+=======
+    x: 1501
+>>>>>>> parent of aa56ff08... Tiempos dentro del nivel
     y: 0
-    width: 552
+    width: 419
     height: 947
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
@@ -845,6 +959,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1370
     y: 92
     width: 550
@@ -853,6 +968,11 @@ MonoBehaviour:
     y: 92
     width: 417
 >>>>>>> parent of d8a34052... Cambios en power ups
+=======
+    x: 1503
+    y: 92
+    width: 417
+>>>>>>> parent of aa56ff08... Tiempos dentro del nivel
     height: 926
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
@@ -860,7 +980,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewResizer:
-    m_CachedPref: 363
+    m_CachedPref: -160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
