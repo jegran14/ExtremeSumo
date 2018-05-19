@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/ScenesEntrega/Intro.unity
-=======
-- path: Assets/Scenes/ScenesEntrega/LevelSelection.unity
->>>>>>> parent of d8a34052... Cambios en power ups
   isLoaded: 1
   isActive: 1

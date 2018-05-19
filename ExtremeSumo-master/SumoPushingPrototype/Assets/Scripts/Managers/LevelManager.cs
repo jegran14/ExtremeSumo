@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class LevelManager : MonoBehaviour {
     //Parametros de la partida
     public int roundsToWin = 1;
-    public float startDelay = 3f;
+    public float startDelay = 1f;
     public float endDelay = 3f;
 
     public Color[] playerColors;
@@ -21,6 +21,8 @@ public class LevelManager : MonoBehaviour {
     public GameObject playerPrefab;
     public GameObject AICharacterPrefab;
     public Transform[] spawnPoints;
+    public GameObject winnerText;
+    private Text textoInicio;
 
     //Elemento proporcionados en la selección del personaje
     public GameObject[] playersAvatar;    
@@ -34,6 +36,7 @@ public class LevelManager : MonoBehaviour {
     //Tiempos de espera al empezar y al acabar cada ronda
     private WaitForSeconds startWait;
     private WaitForSeconds endWait;
+    private float initialTime=5;
 
     //Players round winner and game winner
     private PlayersManager roundWinner;
@@ -43,6 +46,9 @@ public class LevelManager : MonoBehaviour {
 	void Start () {
         startWait = new WaitForSeconds(startDelay);
         endWait = new WaitForSeconds(endDelay);
+        textoInicio = winnerText.GetComponent<Text>();
+
+        SetUp();
 	}
 
     public void SetUp()
@@ -152,7 +158,8 @@ public class LevelManager : MonoBehaviour {
         if(gameWinner != null)
         {
             Debug.Log("Hey we finished");
-            SceneManager.LoadScene(1);
+
+            //SceneManager.LoadScene(1);
         }
         else
         {
@@ -166,13 +173,44 @@ public class LevelManager : MonoBehaviour {
         DisablePlayerContol();
 
         cameraControl.SetStartPositionAndSize();
+        
+        
+        while (initialTime > 0) {
+            if (initialTime == 4) {
+                textoInicio.color = playerColors[4];
+                textoInicio.text = "" + initialTime;
+                winnerText.SetActive(true);
+            } else if (initialTime==3) {
+                textoInicio.color = playerColors[3];
+                textoInicio.text = "" + initialTime;
+            }
+            else if (initialTime == 2)
+            {
+                textoInicio.color = playerColors[2];
+                textoInicio.text = "" + initialTime;
+            }
+            else if (initialTime == 1)
+            {
+                textoInicio.color = playerColors[1];
+                textoInicio.text = "" + initialTime;
+            }
+
+
+            yield return startWait;
+            initialTime--;
+        }
+
+        textoInicio.color = playerColors[0];
+        textoInicio.text = "GO!";
+        yield return startWait;
+        winnerText.SetActive(false);
 
         /*
          roundNumber++;
          messageText.text = "ROUND " + roundNumber;
          */
 
-        yield return startWait;
+        // yield return startWait;
     }
 
     private IEnumerator RoundPlaying()
@@ -209,7 +247,13 @@ public class LevelManager : MonoBehaviour {
         for(int i = 0; i < players.Length; i++)
         {
             if (players[i].playerInstance.activeSelf)
+            {
+                int player=i+1;
+                textoInicio.text = "PLAYER " + player + " WINS!";
+                textoInicio.color = players[i].playerColor;
+                winnerText.SetActive(true);
                 return players[i];
+            }            
         }
 
         return null;
