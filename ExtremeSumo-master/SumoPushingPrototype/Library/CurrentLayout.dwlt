@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
+<<<<<<< HEAD
     x: -73
     y: 1070
     width: 1703
@@ -35,12 +36,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
+=======
+>>>>>>> parent of d8a34052... Cambios en power ups
     x: 0
     y: 43
     width: 1920
     height: 997
   m_ShowMode: 4
   m_Title: 
+<<<<<<< HEAD
   m_RootView: {fileID: 5}
   m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -93,6 +97,12 @@ MonoBehaviour:
   vertical: 0
   controlID: 26084
 --- !u!114 &5
+=======
+  m_RootView: {fileID: 2}
+  m_MinSize: {x: 950, y: 542}
+  m_MaxSize: {x: 10000, y: 10000}
+--- !u!114 &2
+>>>>>>> parent of d8a34052... Cambios en power ups
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -104,18 +114,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 6}
-  - {fileID: 8}
-  - {fileID: 7}
+  - {fileID: 3}
+  - {fileID: 5}
+  - {fileID: 4}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
---- !u!114 &6
+--- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -136,7 +146,7 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &7
+--- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -156,7 +166,7 @@ MonoBehaviour:
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &8
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -168,19 +178,132 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
+  - {fileID: 6}
   - {fileID: 9}
   - {fileID: 12}
-  - {fileID: 15}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 30
     width: 1920
     height: 947
+<<<<<<< HEAD
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
   controlID: 31545
+--- !u!114 &9
+=======
+  m_MinSize: {x: 711, y: 492}
+  m_MaxSize: {x: 18008, y: 14042}
+  vertical: 0
+  controlID: 11282
+--- !u!114 &6
+>>>>>>> parent of d8a34052... Cambios en power ups
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 7}
+  - {fileID: 8}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 843
+    height: 947
+<<<<<<< HEAD
+  m_MinSize: {x: 202, y: 442}
+  m_MaxSize: {x: 4002, y: 8042}
+  vertical: 1
+  controlID: 31652
+--- !u!114 &10
+=======
+  m_MinSize: {x: 200, y: 321}
+  m_MaxSize: {x: 4002, y: 8021}
+  vertical: 1
+  controlID: 11283
+--- !u!114 &7
+>>>>>>> parent of d8a34052... Cambios en power ups
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+<<<<<<< HEAD
+    width: 891
+    height: 305
+  m_MinSize: {x: 202, y: 221}
+=======
+    width: 843
+    height: 247
+  m_MinSize: {x: 102, y: 121}
+>>>>>>> parent of d8a34052... Cambios en power ups
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 15}
+  m_Panes:
+<<<<<<< HEAD
+  - {fileID: 18}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &11
+=======
+  - {fileID: 14}
+  - {fileID: 15}
+  m_Selected: 1
+  m_LastSelected: 0
+--- !u!114 &8
+>>>>>>> parent of d8a34052... Cambios en power ups
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+<<<<<<< HEAD
+    y: 305
+    width: 891
+    height: 642
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 17}
+=======
+    y: 247
+    width: 843
+    height: 700
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 13}
+>>>>>>> parent of d8a34052... Cambios en power ups
+  m_Panes:
+  - {fileID: 13}
+  m_Selected: 0
+  m_LastSelected: 0
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -197,89 +320,24 @@ MonoBehaviour:
   - {fileID: 11}
   m_Position:
     serializedVersion: 2
-    x: 0
+    x: 843
     y: 0
-    width: 891
-    height: 947
-  m_MinSize: {x: 202, y: 442}
-  m_MaxSize: {x: 4002, y: 8042}
-  vertical: 1
-  controlID: 31652
---- !u!114 &10
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 891
-    height: 305
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 18}
-  m_Panes:
-  - {fileID: 18}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &11
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 305
-    width: 891
-    height: 642
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 17}
-  m_Panes:
-  - {fileID: 17}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &12
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 13}
-  - {fileID: 14}
-  m_Position:
-    serializedVersion: 2
-    x: 891
-    y: 0
+<<<<<<< HEAD
     width: 477
+=======
+    width: 658
+>>>>>>> parent of d8a34052... Cambios en power ups
     height: 947
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 31592
 --- !u!114 &13
+=======
+  controlID: 11189
+--- !u!114 &10
+>>>>>>> parent of d8a34052... Cambios en power ups
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -295,6 +353,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 477
     height: 384
   m_MinSize: {x: 204, y: 221}
@@ -305,6 +364,19 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &14
+=======
+    width: 658
+    height: 384
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 16}
+  m_Panes:
+  - {fileID: 16}
+  - {fileID: 17}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &11
+>>>>>>> parent of d8a34052... Cambios en power ups
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -320,6 +392,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 384
+<<<<<<< HEAD
     width: 477
     height: 563
   m_MinSize: {x: 234, y: 271}
@@ -327,9 +400,18 @@ MonoBehaviour:
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
+=======
+    width: 658
+    height: 563
+  m_MinSize: {x: 234, y: 271}
+  m_MaxSize: {x: 10004, y: 10021}
+  m_ActualView: {fileID: 18}
+  m_Panes:
+  - {fileID: 18}
+>>>>>>> parent of d8a34052... Cambios en power ups
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &15
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -343,6 +425,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1368
     y: 0
     width: 552
@@ -380,6 +463,20 @@ MonoBehaviour:
     height: 308
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &17
+=======
+    x: 1501
+    y: 0
+    width: 419
+    height: 947
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 19}
+  m_Panes:
+  - {fileID: 19}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &13
+>>>>>>> parent of d8a34052... Cambios en power ups
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -400,11 +497,17 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 397
     width: 889
     height: 621
+=======
+    y: 339
+    width: 841
+    height: 679
+>>>>>>> parent of d8a34052... Cambios en power ups
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_MaximizeOnPlay: 0
+  m_MaximizeOnPlay: 1
   m_Gizmos: 0
   m_Stats: 0
   m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -412,10 +515,17 @@ MonoBehaviour:
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
+<<<<<<< HEAD
     m_HBaseRangeMin: -444.5
     m_HBaseRangeMax: 444.5
     m_VBaseRangeMin: -302
     m_VBaseRangeMax: 302
+=======
+    m_HBaseRangeMin: -420.5
+    m_HBaseRangeMax: 420.5
+    m_VBaseRangeMin: -331
+    m_VBaseRangeMax: 331
+>>>>>>> parent of d8a34052... Cambios en power ups
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -432,29 +542,47 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
+<<<<<<< HEAD
       width: 889
       height: 604
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 444.5, y: 302}
+=======
+      width: 841
+      height: 662
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 420.5, y: 331}
+>>>>>>> parent of d8a34052... Cambios en power ups
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -444.5
       y: -302
       width: 889
       height: 604
+=======
+      x: -420.5
+      y: -331
+      width: 841
+      height: 662
+>>>>>>> parent of d8a34052... Cambios en power ups
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
+<<<<<<< HEAD
   m_LastWindowPixelSize: {x: 889, y: 621}
+=======
+  m_LastWindowPixelSize: {x: 841, y: 679}
+>>>>>>> parent of d8a34052... Cambios en power ups
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
---- !u!114 &18
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -476,18 +604,32 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 92
+<<<<<<< HEAD
     width: 889
     height: 284
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
   lastFramingTime: 671.832491647952
+=======
+    width: 841
+    height: 226
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_SceneLighting: 1
+  lastFramingTime: 7823.111407934508
+>>>>>>> parent of d8a34052... Cambios en power ups
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: -6.290055, y: -4.545455, z: 3.122654}
     speed: 2
     m_Value: {x: -6.290055, y: -4.545455, z: 3.122654}
+=======
+    m_Target: {x: 1.7236634, y: 7.590495, z: 0.07930946}
+    speed: 2
+    m_Value: {x: 1.7236634, y: 7.590495, z: 0.07930946}
+>>>>>>> parent of d8a34052... Cambios en power ups
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -515,6 +657,7 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
+<<<<<<< HEAD
     m_Target: {x: -0.23306571, y: 0.22285315, z: -0.05496391, w: -0.94497925}
     speed: 2
     m_Value: {x: -0.23306571, y: 0.22285314, z: -0.05496391, w: -0.94497925}
@@ -522,6 +665,15 @@ MonoBehaviour:
     m_Target: 40.41136
     speed: 2
     m_Value: 40.41136
+=======
+    m_Target: {x: -0.2724188, y: -0.05135318, z: 0.014561699, w: -0.9606987}
+    speed: 2
+    m_Value: {x: -0.2724188, y: -0.05135318, z: 0.014561699, w: -0.9606987}
+  m_Size:
+    m_Target: 28.58819
+    speed: 2
+    m_Value: 28.58819
+>>>>>>> parent of d8a34052... Cambios en power ups
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -533,13 +685,92 @@ MonoBehaviour:
   m_ReplacementString: 
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &19
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
+<<<<<<< HEAD
+=======
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Animator
+    m_Image: {fileID: 663490763026382308, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 92
+    width: 841
+    height: 226
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_ViewTransforms:
+    m_KeySerializationHelper:
+    - {fileID: 1107605264664671812, guid: 749526e6cf04f344a95308e77ecbd719, type: 2}
+    - {fileID: 1107968488022215416, guid: a4756008d07880e448c5e70e2f7ca396, type: 2}
+    m_ValueSerializationHelper:
+    - e00: 0.4848059
+      e01: 0
+      e02: 0
+      e03: 99.84532
+      e10: 0
+      e11: 0.4848059
+      e12: 0
+      e13: 94.61981
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.63236845
+      e01: 0
+      e02: 0
+      e03: -16.618439
+      e10: 0
+      e11: 0.63236845
+      e12: 0
+      e13: 18.983421
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  m_PreviewAnimator: {fileID: 0}
+  m_AnimatorController: {fileID: 0}
+  m_BreadCrumbs: []
+  stateMachineGraph: {fileID: 0}
+  stateMachineGraphGUI: {fileID: 0}
+  blendTreeGraph: {fileID: 0}
+  blendTreeGraphGUI: {fileID: 0}
+  m_AutoLiveLink: 1
+  m_MiniTool: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_CurrentEditor: 1
+  m_LayerEditor:
+    m_SelectedLayerIndex: 0
+--- !u!114 &16
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+>>>>>>> parent of d8a34052... Cambios en power ups
   m_EditorHideFlags: 1
   m_Script: {fileID: 12061, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -553,8 +784,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 893
+    x: 845
     y: 92
+<<<<<<< HEAD
     width: 473
     height: 363
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -563,6 +795,16 @@ MonoBehaviour:
     m_SelectedIDs: 64190000
     m_LastClickedID: 0
     m_ExpandedIDs: 5450f1ff9662f1ffc874f1ffec86f1ffc297f1ff74bff1ff8ed1f1ff34f9f1ff8c37f2ff566bf2ffdeaaf2ff6accf2ff2a08f3ff963bf3ffde5df3ffa880f3ff6a85f3ffaaa8f3ff98caf3ff8eedf3ff960bf4ff1253f4ff826af4ff7c7cf4ffd286f4ff8898f4ff5e17f5ffc02ff5ff9a6af5ff1e79f5ffcc8bf5ff1ea2f5ff2aabf5ff52b8f5ff38d2f5ffb4e9f5ff36fff5ff9011f6ff0c25f6ffb43af6ff8a51f6ff7868f6ff988af6ffce93f6ffb298f6ffc2bdf6ffb0cff6ffd0e1f6ff8cf5f6ff1279f7fff09ef7ff40cbf7ffc41bf8ffdc44f8ffa45cf8ffaa77f8ff148df8ff88aef8ff26d1f8ffce18f9ff8434f9ff3079f9ff7c97f9ff80def9ffc8f6f9ff823afaff064bfaff5888faff1ae2fcff1ce2fcff76e2fcff10eafcfff6fbfcff763efdffea64fdffce7bfdffa8a0fdff84affdffd2b5fdff06ebfdffce02feff900afefff01bfeffae2bfeffde35feffb451feffd056feff7062feff549afeff86affeff58ecfeff3e1afffffa54ffff0475ffff067affff72c9ffffeefbffff000000006c6300001864000092640000aa680000660c0100d84e010014580100ac5c0100f45c0100265e01005c5f010008600100781f0700
+=======
+    width: 654
+    height: 363
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_TreeViewState:
+    scrollPos: {x: 0, y: 86}
+    m_SelectedIDs: d4420000
+    m_LastClickedID: 17108
+    m_ExpandedIDs: eefbffff00000000924100009e420000944300008c440000bc4700001e480000404800009248000058490000584a00004c4b0000584c0000624e0000
+>>>>>>> parent of d8a34052... Cambios en power ups
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -578,15 +820,52 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 13}
+      m_ClientGUIView: {fileID: 10}
     m_SearchString: 
   m_ExpandedScenes:
+<<<<<<< HEAD
   - Intro
+=======
+  - LevelSelection
+>>>>>>> parent of d8a34052... Cambios en power ups
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
   m_CurrentSortingName: TransformSorting
+<<<<<<< HEAD
 --- !u!114 &20
+=======
+--- !u!114 &17
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12071, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Animation
+    m_Image: {fileID: 1561878555887300916, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 845
+    y: 92
+    width: 654
+    height: 363
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_AnimEditor: {fileID: 0}
+  m_LockTracker:
+    m_IsLocked: 0
+  m_LastSelectedObjectID: 17108
+--- !u!114 &18
+>>>>>>> parent of d8a34052... Cambios en power ups
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -606,9 +885,13 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 893
+    x: 845
     y: 476
+<<<<<<< HEAD
     width: 473
+=======
+    width: 654
+>>>>>>> parent of d8a34052... Cambios en power ups
     height: 542
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
@@ -623,6 +906,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
+<<<<<<< HEAD
     - Assets/Scenes/ScenesEntrega
   m_ViewMode: 1
   m_StartGridSize: 64
@@ -637,6 +921,22 @@ MonoBehaviour:
     m_SelectedIDs: e20d0000
     m_LastClickedID: 3554
     m_ExpandedIDs: 00000000cc0d0000e20d0000900e0000b00f0000181000007e13000062140000c4140000dc140000f2150000fe160000581700000c190000101900008c190000de190000e0190000181a0000381c0000b61c0000f81c00008a1d0000044f0000064f0000084f00000a4f00000c4f00000e4f0000104f0000124f0000144f0000164f0000184f00001a4f00001c4f00001e4f0000204f0000224f0000244f0000264f0000284f00002a4f000000ca9a3bffffff7f
+=======
+    - Assets/ColorfulButtons
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/ColorfulButtons
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: D:\UJI\Unity\ExtremeSumo\ExtremeSumo-master\SumoPushingPrototype
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 55}
+    m_SelectedIDs: 1c3a0000
+    m_LastClickedID: 14876
+    m_ExpandedIDs: 00000000382e00004e2e0000522e0000fc2e00001c300000a6310000ea330000ce3400003a350000523500006836000074370000ce3700008239000086390000023a0000543a0000563a00008c3a0000ac3c00002a3d0000fe3d0000385500003a5500003c5500003e55000040550000425500004455000046550000485500004a5500004c5500004e55000050550000525500005455000056550000585500005a5500005c5500005e55000000ca9a3bffffff7f
+>>>>>>> parent of d8a34052... Cambios en power ups
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -652,7 +952,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 14}
+      m_ClientGUIView: {fileID: 11}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -664,7 +964,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000cc0d0000e20d0000900e0000b00f0000181000007e13000062140000c4140000dc140000f2150000fe160000581700000c190000101900008c190000de190000e0190000181a0000381c0000b61c0000f81c00008a1d0000044f0000064f0000084f00000a4f00000c4f00000e4f0000104f0000124f0000144f0000164f0000184f00001a4f00001c4f00001e4f0000204f0000224f0000244f0000264f0000284f00002a4f000000ca9a3bffffff7f
+=======
+    m_ExpandedIDs: 00000000382e00004e2e0000522e0000fc2e00001c300000a6310000ea330000ce3400003a350000523500006836000074370000ce3700008239000086390000023a0000543a0000563a00008c3a0000ac3c00002a3d0000fe3d0000385500003a5500003c5500003e55000040550000425500004455000046550000485500004a5500004c5500004e55000050550000525500005455000056550000585500005a5500005c5500005e55000000ca9a3bffffff7f
+>>>>>>> parent of d8a34052... Cambios en power ups
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -691,8 +995,13 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
+<<<<<<< HEAD
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 9c3400007a080000
+=======
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: 9c3400007a08000000000000c27ed9ff
+>>>>>>> parent of d8a34052... Cambios en power ups
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -708,7 +1017,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 14}
+      m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -716,10 +1025,15 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 180}
     m_GridSize: 64
+<<<<<<< HEAD
   m_DirectoriesAreaWidth: 159
 --- !u!114 &21
+=======
+  m_DirectoriesAreaWidth: 175
+--- !u!114 &19
+>>>>>>> parent of d8a34052... Cambios en power ups
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -739,9 +1053,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1370
     y: 92
     width: 550
+=======
+    x: 1503
+    y: 92
+    width: 417
+>>>>>>> parent of d8a34052... Cambios en power ups
     height: 926
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
