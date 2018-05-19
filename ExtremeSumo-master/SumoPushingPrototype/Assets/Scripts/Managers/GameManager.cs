@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour {
             }
         }
     }
-
+    [System.Serializable]
     public class LevelInformation
     {
         public int playerCounter;

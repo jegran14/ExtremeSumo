@@ -48,7 +48,7 @@ public class LevelManager : MonoBehaviour {
         endWait = new WaitForSeconds(endDelay);
         textoInicio = winnerText.GetComponent<Text>();
 
-        SetUp();
+        //SetUp();
 	}
 
     public void SetUp()
@@ -65,7 +65,7 @@ public class LevelManager : MonoBehaviour {
 
     private void SpawnCharacters()
     {
-        for(int i = 0; i < players.Length; i++)
+        for(int i = 0; i < playerCounter; i++)
         {
             players[i] = new PlayersManager();
         }

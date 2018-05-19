@@ -8,10 +8,12 @@ public class ModoHulk : MonoBehaviour {
     public float time;
     public float force;
     public Vector3 scale;
+    public PowerUp power;
+
     // Use this for initialization
     public void StartPowerUp (PlayerController player) {
         //Cambiar condiciones
-        Debug.Log("ModoHulkActivo");
+
         this.player = player;
         player.transform.localScale += scale;
         player.pushForce += force;
@@ -28,9 +30,10 @@ public class ModoHulk : MonoBehaviour {
     IEnumerator CuentaAtras()
     {
         yield return new WaitForSeconds (time);
-        Debug.Log("Reducir");
+
         player.transform.localScale -= scale;
         player.pushForce -= force;
+        power.active = false;
         //Devolver a condiciones normales
     }
 }
