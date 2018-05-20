@@ -48,7 +48,7 @@ public class PlayerController : CharactersBase {
     [HideInInspector]
     public Rigidbody rb;
     private Animator anim;
-    private ParticleSystem particles;
+    public ParticleSystem particles;
     
 
 	// Use this for initialization

@@ -5,23 +5,40 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour {
     public static bool GameIsPaused = false;
+    public static bool GameIsFinish = false;
 
     public GameObject pauseMenuUI;
+    public GameObject finishMenuUI;
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (GameIsFinish)
         {
-            if (GameIsPaused)
+            
+            FinishGame();
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Resume();
-            }
-            else
-            {
-                Pause();
+                if (GameIsPaused)
+                {
+                    Resume();
+                }
+                else
+                {
+                    Pause();
+                }
             }
         }
+
+
 	}
+    public void FinishGame()
+    {
+        finishMenuUI.SetActive(true);
+    }
+
     public void Resume() {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
@@ -37,9 +54,11 @@ public class PauseMenu : MonoBehaviour {
     public void LoadMenu()
     {
         pauseMenuUI.SetActive(false);
+        finishMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
-        SceneManager.LoadScene("Intro");
+        GameIsFinish = false;
+        SceneManager.LoadScene("LevelSelection");
     }
 
     public void QuitGame()
@@ -47,4 +66,14 @@ public class PauseMenu : MonoBehaviour {
         Debug.Log("Quitting Game");
         Application.Quit();
     }
+
+    public void retry()
+    {
+        finishMenuUI.SetActive(false);
+        GameIsFinish = false;
+        FindObjectOfType<LevelManager>().ResetGame();
+
+
+    }
+
 }

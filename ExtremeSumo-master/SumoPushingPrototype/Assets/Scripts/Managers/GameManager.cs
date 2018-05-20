@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
     public LevelInformation lvlInfo;
+    private int currentScene;
 
     private void Awake()
     {
@@ -60,11 +61,12 @@ public class GameManager : MonoBehaviour {
                 lvlManager.playerAsignations = lvlInfo.playerList;
                 lvlManager.playersAvatar = lvlInfo.playerPrefab;
                 lvlManager.playerCounter = lvlInfo.playerCounter;
-
+                currentScene = scene.buildIndex;
                 lvlManager.SetUp();
             }
         }
     }
+
     [System.Serializable]
     public class LevelInformation
     {
