@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class NormalState : ICharacterState
 {
+    
+
     private PlayerController thePlayer;
     private Vector3 movementInput;
     private bool pushing;
@@ -86,9 +88,9 @@ public class NormalState : ICharacterState
         if (pushingTimer <= thePlayer.pushingTime)
         {
             Collider[] colliders = Physics.OverlapBox(thePlayer.transform.position, new Vector3(2.5f, 1f, 1.5f), thePlayer.transform.rotation, thePlayer.pushableLayer);
-           // Collider[] colliders = Physics.OverlapSphere(thePlayer.transform.position, thePlayer.pushRadius, thePlayer.pushableLayer);
+            // Collider[] colliders = Physics.OverlapSphere(thePlayer.transform.position, thePlayer.pushRadius, thePlayer.pushableLayer);
 
-            for(int i = 0; i < colliders.Length; i++)
+            for (int i = 0; i < colliders.Length; i++)
             {
                 if (colliders[i].tag == thePlayer.tag) { continue; }
                 
@@ -108,8 +110,16 @@ public class NormalState : ICharacterState
                 targetPlayer.Pushed(dir, thePlayer.pushForce);*/
 
                 Rigidbody target = colliders[i].GetComponent<Rigidbody>();
+                
 
                 if (!target) continue;
+
+                thePlayer.particles.transform.position = new Vector3(target.transform.position.x, (target.transform.position.y+0.5f), target.transform.position.z);
+                if (!thePlayer.particles.isPlaying)
+                {   
+                    thePlayer.particles.Play();
+                }
+                
                 Debug.Log("Yeh");
                 target.AddExplosionForce(thePlayer.pushForce, thePlayer.transform.position, thePlayer.pushRadius * 1.5f, 0f);
             }

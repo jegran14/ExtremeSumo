@@ -169,7 +169,7 @@ public class LevelManager : MonoBehaviour {
 
     private IEnumerator RoundStarting()
     {
-        ResetAllPlayers();
+        //ResetAllPlayers();
         DisablePlayerContol();
 
         cameraControl.SetStartPositionAndSize();
@@ -236,6 +236,8 @@ public class LevelManager : MonoBehaviour {
 
         gameWinner = GetGameWinner();
 
+        PauseMenu.GameIsFinish = true;
+
         //string message = EndMessage();
         //messageText.text = message;
 
@@ -292,5 +294,13 @@ public class LevelManager : MonoBehaviour {
         {
             players[i].DisableControl();
         }
+    }
+
+    public void ResetGame()
+    {
+        initialTime= 5;
+        ResetAllPlayers();
+        winnerText.SetActive(false);
+        StartCoroutine(GameLoop());
     }
 }
