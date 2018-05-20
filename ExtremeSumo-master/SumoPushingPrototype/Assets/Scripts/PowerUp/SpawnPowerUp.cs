@@ -30,7 +30,7 @@ public class SpawnPowerUp : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         SetRandomTime();
-        y = 0.5f;
+        y = 5f;
         finish = true;
 	}
 
