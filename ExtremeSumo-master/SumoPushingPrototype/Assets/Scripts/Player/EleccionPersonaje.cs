@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class EleccionPersonaje : MonoBehaviour
 {
     private Animator anim;
+    private Animator playerAnim;
     private int index;
     private bool isActive;
 
@@ -99,6 +100,7 @@ public class EleccionPersonaje : MonoBehaviour
             {
                 isReady = true;
                 Ready();
+                
             }
             else
             {
@@ -117,6 +119,8 @@ public class EleccionPersonaje : MonoBehaviour
     }
     public void Ready()
     {
+        anim = characterList[index].GetComponent<Animator>();
+        anim.SetTrigger("Falling");
         anim = button.animator;
         anim.SetBool("isReady", true);
         text.fontSize = 41;
