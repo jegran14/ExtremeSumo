@@ -38,7 +38,7 @@ public class PowerUp : MonoBehaviour {
         BallGenerator();
         positionDone = false;
         ball.SetActive(true);
-        modoHulk = GetComponent<ModoHulk>();
+        //modoHulk = GetComponent<ModoHulk>();
         x = transform.position.x;
         y = transform.position.y;
         z = transform.position.z;
@@ -76,7 +76,7 @@ public class PowerUp : MonoBehaviour {
 
      }
 
-private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (ball!=null && ball.activeInHierarchy)
         {
@@ -101,7 +101,7 @@ private void OnTriggerEnter(Collider other)
         }
     }
 
-public void BallGenerator()
+    public void BallGenerator()
     {
         if (!stopped)
         {
@@ -112,5 +112,5 @@ public void BallGenerator()
             ball = balls[Random.Range(0, balls.Length)];
             ball.SetActive(true);
         }
-    }
+     }
 }

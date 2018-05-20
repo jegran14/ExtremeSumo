@@ -28,14 +28,15 @@ public class SpawnPowerUp : MonoBehaviour {
     private float spawnTime;
 
 	// Use this for initialization
-	void Start () {
+	public void Setup () {
         SetRandomTime();
         y = 5f;
         finish = true;
+        Destroy(powerClone);
 	}
 
     // Update is called once per frame
-    void FixedUpdate() {
+    public void UpdateSpawn() {
         //Contador
         if (finish) { 
             time += Time.deltaTime;

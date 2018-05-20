@@ -19,8 +19,10 @@ public class LevelManager : MonoBehaviour {
     public GameObject playerMarkerPrefab;
     public AIDirector aiDirector;
     public GameObject playerPrefab;
+    public ParticleSystem[] particles;
     public GameObject AICharacterPrefab;
     public Transform[] spawnPoints;
+    public SpawnPowerUp powerUpManager;
     public GameObject winnerText;
     private Text textoInicio;
 
@@ -92,6 +94,8 @@ public class LevelManager : MonoBehaviour {
             //Asignar color
             players[i].playerColor = playerColors[i + 1];
             players[i].playerInstance.tag = "Player" + (i + 1);
+            //Asignar las partículas pertinentes
+            players[i].particles = particles[i];
             players[i].SetUp();
         }
     }
@@ -171,6 +175,7 @@ public class LevelManager : MonoBehaviour {
     {
         //ResetAllPlayers();
         DisablePlayerContol();
+        powerUpManager.Setup();
 
         cameraControl.SetStartPositionAndSize();
         
@@ -217,9 +222,10 @@ public class LevelManager : MonoBehaviour {
     {
         EnablePlayerContol();
         //messageText.text = "";
-
+        
         while (!OnePlayerLeft())
         {
+            powerUpManager.UpdateSpawn();
             yield return null;
         }
     }
@@ -236,12 +242,12 @@ public class LevelManager : MonoBehaviour {
 
         gameWinner = GetGameWinner();
 
-        PauseMenu.GameIsFinish = true;
-
         //string message = EndMessage();
         //messageText.text = message;
 
         yield return endWait;
+
+        PauseMenu.GameIsFinish = true;
     }
 
     private PlayersManager GetRoundWinner()
@@ -300,6 +306,7 @@ public class LevelManager : MonoBehaviour {
     {
         initialTime= 5;
         ResetAllPlayers();
+        powerUpManager.Setup();
         winnerText.SetActive(false);
         StartCoroutine(GameLoop());
     }

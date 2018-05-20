@@ -10,6 +10,7 @@ public class PlayersManager {
     public GameObject playerInstance;
     public GameObject playerAvatar;
     public PlayerMarkerController marker;
+    public ParticleSystem particles;
     public int playerNumber;
     public int playerInput;
     public int nWins;
@@ -19,7 +20,8 @@ public class PlayersManager {
 	public void SetUp()
     {
         movement = playerInstance.GetComponent<CharactersBase>();
-        movement.inputNumber = playerInput;     
+        movement.inputNumber = playerInput;
+        movement.particles = particles;
         marker.spriteColor = playerColor;
 
         nWins = 0;

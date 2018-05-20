@@ -48,7 +48,6 @@ public class PlayerController : CharactersBase {
     [HideInInspector]
     public Rigidbody rb;
     private Animator anim;
-    public ParticleSystem particles;
     
 
 	// Use this for initialization
@@ -122,5 +121,10 @@ public class PlayerController : CharactersBase {
         rb.AddForce(transform.forward * force, ForceMode.Impulse);
 
         //appliedForces = direction * force;
+    }
+
+    private void OnDisable()
+    {
+        rb.velocity = new Vector3(0f, 0f, 0f);
     }
 }

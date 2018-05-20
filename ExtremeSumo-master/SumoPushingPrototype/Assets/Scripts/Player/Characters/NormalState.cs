@@ -117,11 +117,12 @@ public class NormalState : ICharacterState
                 thePlayer.particles.transform.position = new Vector3(target.transform.position.x, (target.transform.position.y+0.5f), target.transform.position.z);
                 if (!thePlayer.particles.isPlaying)
                 {   
+                    //Tienes más sentido si las pertículas se aplican cuando alguien le empuja a este, pero de momento, no se tiene en cuentas esto, aunque deberíamos hacerlo así
                     thePlayer.particles.Play();
                 }
                 
                 Debug.Log("Yeh");
-                target.AddExplosionForce(thePlayer.pushForce, thePlayer.transform.position, thePlayer.pushRadius * 1.5f, 0f);
+                target.AddExplosionForce(thePlayer.pushForce * 10, thePlayer.transform.position, thePlayer.pushRadius * 1.5f, 0f);
             }
 
             pushingTimer += Time.deltaTime;
