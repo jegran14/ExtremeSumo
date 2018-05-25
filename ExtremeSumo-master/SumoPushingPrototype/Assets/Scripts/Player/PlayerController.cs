@@ -125,6 +125,9 @@ public class PlayerController : CharactersBase {
 
     private void OnDisable()
     {
-        rb.velocity = new Vector3(0f, 0f, 0f);
+        if (rb != null)
+        {
+            rb.velocity = new Vector3(0f, 0f, 0f);
+        }
     }
 }
