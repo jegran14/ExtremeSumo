@@ -308,6 +308,7 @@ public class LevelManager : MonoBehaviour {
         ResetAllPlayers();
         powerUpManager.Setup();
         winnerText.SetActive(false);
+        StopAllCoroutines();
         StartCoroutine(GameLoop());
     }
 }
