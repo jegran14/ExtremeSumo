@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EZCameraShake;
+
 
 public class Catcher : MonoBehaviour {
     public ParticleSystem[] particulas;
@@ -53,7 +55,7 @@ public class Catcher : MonoBehaviour {
                     particulas[i].gameObject.SetActive(true);
                     particulas[i].Play();
                 }
-
+                CameraShaker.Instance.ShakeOnce(4f, 4f, .1f, 1f);
             //particulas[i].transform.position = other.transform.position;
 
             //particulas[i].transform.position = new Vector3(other.transform.position.x-(other.transform.position.x-(cam.transform.position.x + width/2)), other.transform.position.y - (other.transform.position.y - (cam.transform.position.y +height / 2)), 0);
