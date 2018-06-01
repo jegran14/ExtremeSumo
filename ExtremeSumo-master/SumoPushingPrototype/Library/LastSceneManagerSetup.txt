@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/ScenesEntrega/Intro.unity
+- path: Assets/Scenes/ScenesEntrega/Escenario.unity
   isLoaded: 1
   isActive: 1

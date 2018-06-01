@@ -35,8 +35,8 @@ public class EnemyMovement : CharactersBase {
 
 
     // Use this for initialization
-    void Awake() {
-
+    void Start() {
+        director = FindObjectOfType<AIDirector>();
         nav = GetComponent<UnityEngine.AI.NavMeshAgent>();
         nav.enabled = true;
         anim = GetComponentInChildren<Animator>();
@@ -46,8 +46,16 @@ public class EnemyMovement : CharactersBase {
         pushing = false;
         pushCounter = 0;
         pushingTimer = 0;
+    }
 
-        director = FindObjectOfType<AIDirector>();
+    private void OnEnable()
+    {
+        if(nav != null)
+            nav.enabled = true;
+
+        pushing = false;
+        pushCounter = 0;
+        pushingTimer = 0;
     }
 
     // Update is called once per frame
@@ -59,7 +67,7 @@ public class EnemyMovement : CharactersBase {
 
         for (int i = 0; i < director.targets.Length; i++)
         {
-            if(director.targets[i] != this.transform)
+            if(director.targets[i] != this.transform && director.targets[i].gameObject.activeInHierarchy)
             {
                 Vector3 diference = (position - director.targets[i].position);
                 float currentDistance = diference.sqrMagnitude;
@@ -77,13 +85,12 @@ public class EnemyMovement : CharactersBase {
         }
         else
         {
-            anim.SetBool("Walking", false);
             Push();
         }
 
         if (!Physics.Raycast(transform.position,
             transform.TransformDirection(Vector3.down),
-            out hit, Mathf.Infinity, LayerMask.GetMask("Ground")))
+            out hit, Mathf.Infinity, LayerMask.GetMask("Ground")) || !IsTargetInArena())
         {
             nav.enabled = false;
             anim.SetBool("Walking", false);
@@ -93,16 +100,24 @@ public class EnemyMovement : CharactersBase {
             anim.SetBool("Walking", true);
             nav.enabled = true;
         }
-        nav.SetDestination(thePlayer.transform.position);
+        if (nav.isActiveAndEnabled)
+        {
+            nav.SetDestination(thePlayer.transform.position);
+        }
     }
 
     private void FixedUpdate()
     {
-        Debug.Log("Push");
         if (pushing){
            Pushing();
         }
     }
+
+    private bool IsTargetInArena()
+    {
+        return Vector3.Distance(thePlayer.position, Vector3.zero) < 9.9f;
+    }
+
     private void Push()
     {
         pushCounter++;
@@ -123,7 +138,7 @@ public class EnemyMovement : CharactersBase {
 
             for (int i = 0; i < colliders.Length; i++)
             {
-                if (colliders[i].tag == transform.tag) { Debug.Log("Yoh!"); continue; }
+                if (colliders[i].tag == transform.tag) {  continue; }
 
                 Rigidbody target = colliders[i].GetComponent<Rigidbody>();
 

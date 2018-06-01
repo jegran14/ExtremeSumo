@@ -11,9 +11,12 @@ public class SelectorManager : MonoBehaviour {
 
     public GameObject canvasStart;
     public GameObject nextMenu;
+    public GameObject aiMenu;
     public GameObject[] charactersPrefabs;
     private Animator anim;
     public Button startButton;
+
+    private GameObject[] avatar;
 
 	// Use this for initialization
 	void Start () {
@@ -29,19 +32,14 @@ public class SelectorManager : MonoBehaviour {
         {
             if (Input.GetButtonDown("Jump" + 1) || Input.GetButtonDown("Jump" + 2) || Input.GetButtonDown("Jump" + 3) || Input.GetButtonDown("Jump" + 4))
             {
-                GameObject[] avatar = new GameObject[4];
+                avatar = new GameObject[4];
                 Debug.Log(contador);
                 for (int i = 0; i < contador; i++)
                 {
                     avatar[i] = charactersPrefabs[eleccionPersonaje[i].GetCharacter()];
                 }
-                /*for(int i = contador; i < playerList.Length; i++)
-                {
-                    avatar[i] = charactersPrefabs[Random.Range(0, 20)];
-                }*/
-
-                FindObjectOfType<GameManager>().FromCharToLevels(contador, playerList, avatar, nextMenu);
-                this.gameObject.SetActive(false);
+                
+                aiMenu.SetActive(true);
             }
         }
 
@@ -61,6 +59,25 @@ public class SelectorManager : MonoBehaviour {
         {
             PlayerAsign(4);           
         }
+    }
+
+    public void ToLevelSelection(bool haveCPU)
+    {
+        aiMenu.SetActive(false);
+
+        int cpuCouter = 0;
+        if (haveCPU)
+        {
+            cpuCouter = 4 - contador;
+
+            for (int i = contador; i < 4; i++)
+            {
+                avatar[i] = charactersPrefabs[eleccionPersonaje[i].GetCharacter()];
+            }
+        }
+
+        FindObjectOfType<GameManager>().FromCharToLevels(contador, cpuCouter, playerList, avatar, nextMenu);
+        this.gameObject.SetActive(false);
     }
 
     public void DesactivarCanvas()

@@ -30,9 +30,11 @@ public class LevelManager : MonoBehaviour {
     public GameObject[] playersAvatar;    
     public int[] playerAsignations;
     public int playerCounter = 2;
+    public int cpuCounter = 0;
 
     //Elementos a instanciar en el nivel
     public PlayersManager[] players;
+    public PlayersManager[] cpuCharacters;
     private PlayerMarkerController[] markers;
 
     //Tiempos de espera al empezar y al acabar cada ronda
@@ -56,11 +58,13 @@ public class LevelManager : MonoBehaviour {
     public void SetUp()
     {
         players = new PlayersManager[playerCounter];
-        markers = new PlayerMarkerController[playerCounter];
+        markers = new PlayerMarkerController[playerCounter + cpuCounter];
+        cpuCharacters = new PlayersManager[cpuCounter];
 
         SpawnCharacters();
-        //SpawnCPUCharactes();
+        SpawnCPUCharactes();
         SetCameraTragets();
+        SetAITargets();
 
         StartCoroutine(GameLoop());
     }
@@ -102,34 +106,55 @@ public class LevelManager : MonoBehaviour {
 
     private void SpawnCPUCharactes()
     {
-        for(int i = playerCounter; i < players.Length; i++)
+        for (int i = 0; i < cpuCounter; i++)
+        {
+            cpuCharacters[i] = new PlayersManager();
+        }
+
+        for (int i = 0; i < cpuCounter; i++)
         {
             //Instanciar personaje del jugador
-            players[i].playerInstance =
-                (GameObject)Instantiate(AICharacterPrefab, spawnPoints[i].position, Quaternion.LookRotation(new Vector3(0f, spawnPoints[i].position.y, 0f) - spawnPoints[i].position));
+            cpuCharacters[i].playerInstance =
+                (GameObject)Instantiate(AICharacterPrefab, spawnPoints[playerCounter + i].position, Quaternion.LookRotation(new Vector3(0f, spawnPoints[playerCounter + i].position.y, 0f) - spawnPoints[playerCounter + i].position));
             //Instanciar marker del jugador
             GameObject marker = Instantiate(playerMarkerPrefab, canvas.transform);
-            markers[i] = marker.GetComponent<PlayerMarkerController>();
-            markers[i].target = players[i].playerInstance.transform;
-            players[i].marker = markers[i];
-            markers[i].playerNumber.sprite = textMarkers[0];
+            markers[playerCounter + i] = marker.GetComponent<PlayerMarkerController>();
+            markers[playerCounter + i].target = cpuCharacters[i].playerInstance.transform;
+            cpuCharacters[i].marker = markers[playerCounter + i];
+            markers[playerCounter + i].playerNumber.sprite = textMarkers[0];
             //Asignar spwnpoint
-            players[i].spawnPoint = spawnPoints[i];
+            cpuCharacters[i].spawnPoint = spawnPoints[playerCounter + i];
             //Asignar avatar al jugador
-            players[i].playerAvatar =
-                (GameObject)Instantiate(playersAvatar[i], players[i].playerInstance.transform);
+            cpuCharacters[i].playerAvatar =
+                (GameObject)Instantiate(playersAvatar[playerCounter + i], cpuCharacters[i].playerInstance.transform);
             //Asignar Input
-            players[i].playerInput = 0;
+            cpuCharacters[i].playerInput = 0;
             //Asignar color
-            players[i].playerColor = playerColors[0];
-            players[i].playerInstance.tag = "Player" + (i + 1);
-            players[i].SetUp();
+            cpuCharacters[i].playerColor = playerColors[0];
+            cpuCharacters[i].playerInstance.tag = "Player" + (playerCounter + i + 1);
+            cpuCharacters[i].SetUp();
         }
     }
 
     private void SetCameraTragets()
     {
-        Transform[] targets = new Transform[players.Length];
+        Transform[] targets = new Transform[playerCounter + cpuCounter];
+
+        for (int i = 0; i < players.Length; i++)
+        {
+            targets[i] = players[i].playerInstance.transform;
+        }
+        for(int i = 0; i < cpuCounter; i++)
+        {
+            targets[playerCounter + i] = cpuCharacters[i].playerInstance.transform;
+        }
+
+        cameraControl.m_Targets = targets;
+    }
+
+    private void SetAITargets()
+    {
+        Transform[] targets = new Transform[playerCounter];
 
         for (int i = 0; i < players.Length; i++)
         {
@@ -137,7 +162,6 @@ public class LevelManager : MonoBehaviour {
         }
 
         aiDirector.targets = targets;
-        cameraControl.m_Targets = targets;
     }
 
     private bool OnePlayerLeft()
@@ -153,6 +177,32 @@ public class LevelManager : MonoBehaviour {
         return numPlayersLeft <= 1; //Hará falta otra funcion si se quiere implementar el combate por equipos
     }
 
+    private bool NoPlayerLeft()
+    {
+        int numPlayersLeft = 0;
+
+        for (int i = 0; i < players.Length; i++)
+        {
+            if (players[i].playerInstance.activeSelf)
+                numPlayersLeft++;
+        }
+
+        return numPlayersLeft <= 0; //Hará falta otra funcion si se quiere implementar el combate por equipos
+    }
+
+    private bool NoneCpuCharactersLeft()
+    {
+        int cpuCharactersLeft = 0;
+
+        for(int i = 0; i < cpuCharacters.Length; i++)
+        {
+            if (cpuCharacters[i].playerInstance.activeSelf)
+                cpuCharactersLeft++;
+        }
+
+        return cpuCharactersLeft <= 0;
+    }
+
     private IEnumerator GameLoop()
     {
         yield return StartCoroutine(RoundStarting());
@@ -161,8 +211,6 @@ public class LevelManager : MonoBehaviour {
 
         if(gameWinner != null)
         {
-            Debug.Log("Hey we finished");
-
             //SceneManager.LoadScene(1);
         }
         else
@@ -223,7 +271,7 @@ public class LevelManager : MonoBehaviour {
         EnablePlayerContol();
         //messageText.text = "";
         
-        while (!OnePlayerLeft())
+        while ((!NoneCpuCharactersLeft() && !NoPlayerLeft()) || !OnePlayerLeft())
         {
             powerUpManager.UpdateSpawn();
             yield return null;
@@ -241,7 +289,7 @@ public class LevelManager : MonoBehaviour {
             roundWinner.nWins++;
 
         gameWinner = GetGameWinner();
-
+        Debug.Log("Yeh");
         //string message = EndMessage();
         //messageText.text = message;
 
@@ -264,6 +312,10 @@ public class LevelManager : MonoBehaviour {
             }            
         }
 
+        textoInicio.text = "THE CPU WINS!!";
+        textoInicio.color = cpuCharacters[0].playerColor;
+        winnerText.SetActive(true);
+
         return null;
     }
 
@@ -284,6 +336,11 @@ public class LevelManager : MonoBehaviour {
         {
             players[i].Reset();
         }
+
+        for (int i = 0; i < cpuCounter; i++)
+        {
+            cpuCharacters[i].Reset();
+        }
     }
 
     private void EnablePlayerContol()
@@ -292,6 +349,11 @@ public class LevelManager : MonoBehaviour {
         {
             players[i].EnableControl();
         }
+
+        for(int i = 0; i < cpuCounter; i++)
+        {
+            cpuCharacters[i].EnableControl();
+        }
     }
 
     private void DisablePlayerContol()
@@ -299,6 +361,11 @@ public class LevelManager : MonoBehaviour {
         for (int i = 0; i < players.Length; i++)
         {
             players[i].DisableControl();
+        }
+
+        for (int i = 0; i < cpuCounter; i++)
+        {
+            cpuCharacters[i].DisableControl();
         }
     }
 

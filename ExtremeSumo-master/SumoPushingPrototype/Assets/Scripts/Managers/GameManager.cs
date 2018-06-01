@@ -25,9 +25,10 @@ public class GameManager : MonoBehaviour {
 
     }
 
-    public void FromCharToLevels(int pc, int[] pList, GameObject[] pPrefabs, GameObject menu)
+    public void FromCharToLevels(int pc, int aic, int[] pList, GameObject[] pPrefabs, GameObject menu)
     {
         lvlInfo.playerCounter = pc;
+        lvlInfo.cpuCounter = aic;
         lvlInfo.playerList = pList;
         lvlInfo.playerPrefab = pPrefabs;
 
@@ -61,6 +62,7 @@ public class GameManager : MonoBehaviour {
                 lvlManager.playerAsignations = lvlInfo.playerList;
                 lvlManager.playersAvatar = lvlInfo.playerPrefab;
                 lvlManager.playerCounter = lvlInfo.playerCounter;
+                lvlManager.cpuCounter = lvlInfo.cpuCounter;
                 currentScene = scene.buildIndex;
                 lvlManager.SetUp();
             }
@@ -71,6 +73,7 @@ public class GameManager : MonoBehaviour {
     public class LevelInformation
     {
         public int playerCounter;
+        public int cpuCounter;
         public int[] playerList;
         public GameObject[] playerPrefab;
     }

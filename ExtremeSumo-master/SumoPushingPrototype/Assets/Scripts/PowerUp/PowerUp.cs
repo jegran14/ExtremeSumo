@@ -58,7 +58,6 @@ public class PowerUp : MonoBehaviour {
         else if (!positionDone)
         {
             y -= 0.01f;
-            Debug.Log(y);
             transform.position = new Vector3(x, y, z);
         }
         else
@@ -86,8 +85,11 @@ public class PowerUp : MonoBehaviour {
                 stopped = true;
                 anim.SetTrigger("stopped");
                 player = other.GetComponent<PlayerController>();
-                ball.SetActive(false);
-                modoHulk.StartPowerUp(player);
+                if(player != null)
+                {
+                    ball.SetActive(false);
+                    modoHulk.StartPowerUp(player);
+                }
             }
             else if (other.tag.Contains("Player") && ball.name == "Pitufo")
             {
@@ -95,8 +97,11 @@ public class PowerUp : MonoBehaviour {
                 stopped = true;
                 anim.SetTrigger("stopped");
                 player = other.GetComponent<PlayerController>();
-                ball.SetActive(false);
-                modoPitufo.StartPowerUp(player);
+                if(player != null)
+                {
+                    ball.SetActive(false);
+                    modoPitufo.StartPowerUp(player);
+                }
             }
         }
     }
